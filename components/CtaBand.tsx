@@ -36,13 +36,14 @@ export function CtaBand() {
             <div className="img-frame relative aspect-[4/5] w-64 rounded-lg">
               <Image
                 src="/images/inhaber.jpeg"
-                alt="Ihr direkter Ansprechpartner bei der Bastech Betriebe AG"
+                alt="Danilo Falzarano, Inhaber der Bastech Betriebe AG"
                 fill
                 sizes="256px"
                 className="rounded-lg object-cover"
               />
             </div>
             <figcaption className="mt-3 text-[14px] text-on-brand/70">
+              <span className="font-semibold text-on-brand">Danilo Falzarano</span>, Inhaber.
               Ihr direkter Draht: kein Callcenter, keine Warteschlaufe.
             </figcaption>
           </figure>

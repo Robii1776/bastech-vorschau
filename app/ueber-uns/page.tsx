@@ -35,9 +35,10 @@ export default function UeberUnsPage() {
                 die aktuellen.
               </p>
               <p>
-                Wir bleiben bewusst klein und direkt. Wer bei uns anruft, spricht mit der Person,
-                die nachher auch an der Maschine steht, nicht mit einer Disposition. Das macht
-                uns schnell, und es macht unsere Aussagen verbindlich.
+                Wir bleiben bewusst klein und direkt. Wer bei uns anruft, hat Inhaber Danilo
+                Falzarano am Apparat, also die Person, die nachher auch an der Maschine steht,
+                nicht eine Disposition. Das macht uns schnell, und es macht unsere Aussagen
+                verbindlich.
               </p>
             </div>
 
@@ -60,16 +61,18 @@ export default function UeberUnsPage() {
               <div className="img-frame relative aspect-[3/4] rounded-lg">
                 <Image
                   src="/images/inhaber.jpeg"
-                  alt="Inhaber der Bastech Betriebe AG"
+                  alt="Danilo Falzarano, Inhaber der Bastech Betriebe AG"
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 480px"
                   className="rounded-lg object-cover"
                 />
               </div>
-              {/* TODO Übergabe: Name und Funktion des Inhabers ergänzen (aus Checkliste) */}
-              <figcaption className="mt-3 font-mono text-[13px] text-ink-soft">
-                Inhaber &amp; Ihr direkter Ansprechpartner
+              <figcaption className="mt-3 text-[15px]">
+                <span className="font-semibold">Danilo Falzarano</span>
+                <span className="block text-[13px] text-ink-soft">
+                  Inhaber und Ihr direkter Ansprechpartner
+                </span>
               </figcaption>
             </figure>
           </Reveal>

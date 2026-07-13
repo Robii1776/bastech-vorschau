@@ -46,6 +46,18 @@ export default function KontaktPage() {
               </div>
 
               <div>
+                <p className="text-[13px] font-semibold uppercase tracking-wider text-ink-soft">WhatsApp</p>
+                <a
+                  href={site.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-lg font-medium text-brand transition-colors duration-200 hover:text-brand-deep"
+                >
+                  Direkt schreiben, Foto der Maschine gleich mitschicken
+                </a>
+              </div>
+
+              <div>
                 <p className="text-[13px] font-semibold uppercase tracking-wider text-ink-soft">E-Mail</p>
                 <a
                   href={`mailto:${site.email}`}

@@ -36,12 +36,19 @@ Der Inhalt von `./out` kann direkt auf jeden Webspace hochgeladen werden.
 - [ ] **Adresse bestätigen**: Website sagt „Kreuzmatte 1a, 6260 Mehlsecken“,
       Handelsregister „Beim Kreuz 21, 6262 Langnau b. Reiden“ (Mutation 02/2026).
       Korrekte Adresse in `lib/site.ts` eintragen.
-- [ ] **Checkliste des Kunden einarbeiten**: Inhabername (Über-uns-Seite + Impressum),
-      Erreichbarkeitszeiten (Kontakt), evtl. Teamfotos.
-- [ ] **Claims prüfen**: „Rückmeldung < 24 h“ ist als Versprechen eingebaut –
+- [ ] **Inhaber-Angaben bestätigen**: Danilo Falzarano ist als Inhaber eingebaut
+      (Über uns, CTA-Karte). Handelsregister nennt (Stand vor Mutation 02/2026)
+      André Basler; Rollen und Schreibweise mit dem Kunden verifizieren,
+      danach auch im Impressum als verantwortliche Person eintragen.
+- [ ] **Checkliste des Kunden einarbeiten**: Erreichbarkeitszeiten (Kontakt),
+      evtl. Teamfotos und weitere Mitarbeitende.
+- [ ] **Claims prüfen**: „Rückmeldung unter 24 h“ ist als Versprechen eingebaut,
       mit dem Kunden bestätigen oder anpassen (`app/page.tsx`, `CtaBand.tsx`, Kontakt).
-- [ ] **Preise prüfen**: Preise aus alter Produktliste übernommen (EUR, VB) –
-      Aktualität bestätigen lassen (`lib/machines.ts`).
+- [ ] **Preise prüfen**: Auf Kundenwunsch in CHF ausgezeichnet; Beträge stammen
+      aus der alten Produktliste (dort EUR). Beträge bestätigen lassen
+      (`lib/machines.ts`).
+- [ ] **WhatsApp bestätigen**: Buttons verlinken auf 079 388 67 68
+      (`lib/site.ts`); prüfen, ob diese Nummer WhatsApp Business nutzt.
 - [ ] **Domain & DNS**: `bastechbetriebeag.ch` auf neues Hosting zeigen lassen;
       danach Google Search Console verifizieren und `sitemap.xml` einreichen.
 - [ ] **Google Business Profile** verknüpfen (Adresse identisch zur Website halten –

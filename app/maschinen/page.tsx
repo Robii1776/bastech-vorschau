@@ -72,7 +72,7 @@ export default function MaschinenPage() {
 
           <Reveal className="mt-12">
             <p className="max-w-[64ch] text-[14px] leading-relaxed text-ink-soft">
-              Alle Preise in EUR, Verhandlungsbasis (VB), exkl. Transport. Zustand und
+              Alle Preise in CHF, Verhandlungsbasis (VB), exkl. Transport. Zustand und
               Verfügbarkeit auf Anfrage. Die Liste wird laufend aktualisiert.
             </p>
             <Link

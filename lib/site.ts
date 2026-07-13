@@ -7,6 +7,7 @@ export const site = {
   phone2: "079 919 17 29",
   phone2Href: "tel:+41799191729",
   email: "info@bastech.ch",
+  whatsapp: "https://wa.me/41793886768",
   // TODO Übergabe: Adresse mit Handelsregister abgleichen
   // (HR-Eintrag: Beim Kreuz 21, 6262 Langnau b. Reiden / Website: Kreuzmatte 1a, 6260 Mehlsecken)
   address: {

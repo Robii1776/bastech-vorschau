@@ -114,6 +114,16 @@ export default function HomePage() {
                 </div>
               ))}
             </dl>
+            <Link
+              href="/maschinen/"
+              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-brand-tint px-4 py-2 text-[14px] font-semibold text-brand-deep transition-colors duration-200 hover:bg-brand hover:text-on-brand"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute h-full w-full animate-ping rounded-full bg-brand opacity-60 group-hover:bg-on-brand" />
+                <span className="relative h-2 w-2 rounded-full bg-brand group-hover:bg-on-brand" />
+              </span>
+              {machines.length} Occasionsmaschinen aktuell verfügbar
+            </Link>
           </Reveal>
 
           <Reveal delay={0.15} y={0} className="relative">
@@ -245,21 +255,83 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <blockquote className="mt-10 border-l-0 rounded-lg bg-brand-tint p-6">
+            <blockquote className="mt-10 rounded-lg bg-brand-tint p-6">
               <p className="text-[16px] font-medium leading-relaxed text-brand-deep">
                 «Beeindruckende Einsatzbereitschaft und Flexibilität, enormes Fachwissen.
                 Ein Allrounder mit lösungsorientiertem Handeln.»
               </p>
-              <footer className="mt-3 font-mono text-[13px] text-ink-soft">
-                Kundenstimme aus der Druckweiterverarbeitung
+              <footer className="mt-3 text-[14px] text-ink-soft">
+                <span className="font-semibold text-ink">Patrick Näther</span>, Leiter Technischer
+                Support, Swissprinters AG, Zofingen
               </footer>
             </blockquote>
           </Reveal>
         </div>
       </section>
 
+      {/* Ablauf */}
+      <section className="mx-auto max-w-[1320px] px-5 py-20 sm:px-8 md:py-24">
+        <Reveal>
+          <h2 className="max-w-[22ch] text-3xl font-bold sm:text-4xl">
+            Vom Anruf bis zur laufenden Maschine
+          </h2>
+          <p className="mt-3 max-w-[54ch] text-[16px] leading-relaxed text-ink-soft">
+            Kein Ticketsystem, keine Umwege. So arbeiten wir, wenn bei Ihnen eine Maschine steht
+            oder eine Revision ansteht.
+          </p>
+        </Reveal>
+        <StaggerList
+          className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4"
+          items={[
+            [
+              "1",
+              "Kontakt aufnehmen",
+              "Anruf, WhatsApp oder Formular. Schildern Sie kurz, welche Maschine betroffen ist und was passiert ist.",
+            ],
+            [
+              "2",
+              "Ehrliche Einschätzung",
+              "Sie erhalten innert 24 Stunden eine erste Diagnose und eine klare Empfehlung, ob sich der Eingriff lohnt.",
+            ],
+            [
+              "3",
+              "Einsatz",
+              "Reparatur oder Revision, bei Ihnen vor Ort oder in unserer Werkstatt in Mehlsecken. Termintreu und sauber.",
+            ],
+            [
+              "4",
+              "Abnahme & Dokumentation",
+              "Die Maschine läuft, der Zustand ist dokumentiert. Auf Wunsch planen wir gleich das nächste Wartungsfenster.",
+            ],
+          ].map(([num, title, text]) => (
+            <div key={num}>
+              <p className="font-mono text-[15px] font-medium text-brand">{num}</p>
+              <h3 className="mt-2 text-lg font-bold">{title}</h3>
+              <p className="mt-2 max-w-[38ch] text-[15px] leading-relaxed text-ink-soft">{text}</p>
+            </div>
+          ))}
+        />
+        <Reveal className="mt-12 flex flex-wrap items-center gap-4">
+          <a
+            href={site.phoneHref}
+            className="pressable rounded-md bg-brand px-7 py-4 font-mono text-[16px] font-medium text-on-brand transition-colors duration-200 hover:bg-brand-deep"
+          >
+            {site.phone}
+          </a>
+          <a
+            href={site.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pressable rounded-md border border-line bg-white px-7 py-4 text-[16px] font-semibold transition-colors duration-200 hover:border-brand hover:text-brand"
+          >
+            Per WhatsApp schreiben
+          </a>
+        </Reveal>
+      </section>
+
       {/* FAQ */}
-      <section className="mx-auto max-w-[880px] px-5 py-20 sm:px-8 md:py-24">
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-[880px] px-5 py-20 sm:px-8 md:py-24">
         <Reveal>
           <h2 className="text-3xl font-bold sm:text-4xl">Häufige Fragen</h2>
           <p className="mt-3 max-w-[56ch] text-[16px] leading-relaxed text-ink-soft">
@@ -269,9 +341,10 @@ export default function HomePage() {
             </a>
           </p>
         </Reveal>
-        <Reveal delay={0.1} className="mt-10">
-          <Faq items={faqItems} />
-        </Reveal>
+          <Reveal delay={0.1} className="mt-10">
+            <Faq items={faqItems} />
+          </Reveal>
+        </div>
       </section>
 
       <CtaBand />

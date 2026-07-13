@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Barlow_Semi_Condensed, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileActionBar } from "@/components/MobileActionBar";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -101,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="pt-20">{children}</main>
         <Footer />
+        <MobileActionBar />
       </body>
     </html>
   );
