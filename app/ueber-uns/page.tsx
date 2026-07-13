@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Über uns – Maschinenbau-Handwerk aus dem Kanton Luzern",
+  title: "Über uns: Maschinenbau-Handwerk aus dem Kanton Luzern",
   description:
     "Die Bastech Betriebe AG steht seit 2008 für technische Dienstleistung und Handel in der grafischen Industrie. Lernen Sie den Betrieb aus Mehlsecken LU kennen.",
 };
@@ -17,7 +17,7 @@ export default function UeberUnsPage() {
         <div className="grid items-start gap-12 lg:grid-cols-[1.2fr_1fr]">
           <Reveal>
             <p className="font-mono text-[13px] font-medium text-brand">Über uns</p>
-            <h1 className="mt-4 max-w-[18ch] text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">
+            <h1 className="mt-4 max-w-[18ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
               Handwerk, das Maschinen am Leben hält
             </h1>
             <div className="mt-8 max-w-[62ch] space-y-5 text-[16px] leading-relaxed text-ink-soft">
@@ -25,7 +25,7 @@ export default function UeberUnsPage() {
                 Die Bastech Betriebe AG ist seit {site.founded} als Aktiengesellschaft im Kanton
                 Luzern zu Hause. Was als technische Dienstleistung für die grafische Industrie
                 begann, ist heute ein Betrieb, der Maschinen wartet, revidiert, repariert,
-                handelt – und wenn nötig neu erfindet.
+                handelt und, wenn nötig, neu erfindet.
               </p>
               <p>
                 Unsere Kundschaft sind Druckereien, Buchbindereien, Weiterverarbeitungs- und
@@ -36,20 +36,20 @@ export default function UeberUnsPage() {
               </p>
               <p>
                 Wir bleiben bewusst klein und direkt. Wer bei uns anruft, spricht mit der Person,
-                die nachher auch an der Maschine steht – nicht mit einer Disposition. Das macht
+                die nachher auch an der Maschine steht, nicht mit einer Disposition. Das macht
                 uns schnell, und es macht unsere Aussagen verbindlich.
               </p>
             </div>
 
-            <dl className="mt-10 grid max-w-lg grid-cols-3 divide-x divide-line border-y border-line">
+            <dl className="mt-10 flex max-w-lg flex-wrap gap-x-12 gap-y-5">
               {[
                 ["Gegründet", site.founded],
                 ["Rechtsform", "AG"],
                 ["Standort", "Mehlsecken LU"],
               ].map(([label, value]) => (
-                <div key={label} className="px-4 py-4 first:pl-0">
-                  <dt className="text-[12px] font-medium uppercase tracking-wide text-ink-soft">{label}</dt>
-                  <dd className="mt-1 font-mono text-[16px] font-medium">{value}</dd>
+                <div key={label}>
+                  <dt className="text-[13px] font-medium text-ink-soft">{label}</dt>
+                  <dd className="mt-0.5 font-mono text-[16px] font-medium">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -79,7 +79,7 @@ export default function UeberUnsPage() {
       <section className="border-y border-line bg-surface">
         <div className="mx-auto max-w-[1320px] px-5 py-20 sm:px-8 md:py-24">
           <Reveal>
-            <h2 className="max-w-[20ch] text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="max-w-[20ch] text-3xl font-bold sm:text-4xl">
               Wofür wir stehen
             </h2>
           </Reveal>
@@ -87,7 +87,7 @@ export default function UeberUnsPage() {
             {[
               [
                 "Ehrlichkeit vor Umsatz",
-                "Wenn sich eine Reparatur nicht lohnt, sagen wir es – auch wenn wir damit einen Auftrag verlieren. Langfristiges Vertrauen ist uns mehr wert.",
+                "Wenn sich eine Reparatur nicht lohnt, sagen wir es, auch wenn wir damit einen Auftrag verlieren. Langfristiges Vertrauen ist uns mehr wert.",
               ],
               [
                 "Erreichbarkeit",
@@ -95,12 +95,11 @@ export default function UeberUnsPage() {
               ],
               [
                 "Qualität im Detail",
-                "Eine Revision ist bei uns erst fertig, wenn die Maschine läuft wie am ersten Tag – geprüft, eingestellt und dokumentiert.",
+                "Eine Revision ist bei uns erst fertig, wenn die Maschine läuft wie am ersten Tag: geprüft, eingestellt und dokumentiert.",
               ],
             ].map(([title, text], i) => (
               <Reveal key={title} delay={i * 0.08}>
-                <span aria-hidden className="block h-px w-10 bg-brand" />
-                <h3 className="mt-4 text-xl font-bold tracking-tight">{title}</h3>
+                <h3 className="text-xl font-bold">{title}</h3>
                 <p className="mt-3 max-w-[44ch] text-[15px] leading-relaxed text-ink-soft">{text}</p>
               </Reveal>
             ))}
@@ -111,12 +110,12 @@ export default function UeberUnsPage() {
       <section className="mx-auto max-w-[1320px] px-5 py-20 sm:px-8 md:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="max-w-[20ch] text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="max-w-[20ch] text-3xl font-bold sm:text-4xl">
               Mitten in der Schweiz, schnell bei Ihnen
             </h2>
             <p className="mt-5 max-w-[54ch] text-[16px] leading-relaxed text-ink-soft">
               Von {site.address.city} bei Reiden LU aus sind wir in kurzer Zeit in Luzern, Aargau,
-              Zürich, Bern und der ganzen Deutschschweiz – und bei Bedarf auch darüber hinaus.
+              Zürich, Bern und der ganzen Deutschschweiz, bei Bedarf auch darüber hinaus.
               Werkstatt-Arbeiten erledigen wir bei uns, Einsätze vor Ort direkt in Ihrer
               Produktion.
             </p>

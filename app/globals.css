@@ -12,10 +12,13 @@
   --color-brand-tint: oklch(93.5% 0.018 250);
   --color-on-brand: oklch(98% 0.005 250);
 
-  --font-sans: var(--font-plex), system-ui, sans-serif;
+  /* Barlow: Grotesk nach Vorbild von Industrie- und Verkehrsbeschilderung.
+     Überschriften in Barlow Semi Condensed (Typenschild-Charakter). */
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+  --font-display: var(--font-barlow-display), var(--font-barlow), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 
-  /* IBM Plex wirkt in 600 präziser als in 700 – "bold" global abschwächen */
+  /* "bold" global auf 600: präzise statt marktschreierisch */
   --font-weight-bold: 600;
 
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
@@ -43,8 +46,9 @@ body {
 h1,
 h2,
 h3 {
+  font-family: var(--font-display);
   text-wrap: balance;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
 }
 
 p {
@@ -81,7 +85,8 @@ p {
   bottom: -6px;
   height: 2px;
   width: 100%;
-  background: var(--color-brand);
+  border-radius: 2px;
+  background: color-mix(in oklch, var(--color-brand) 75%, transparent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 220ms var(--ease-out-strong);

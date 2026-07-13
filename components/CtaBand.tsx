@@ -8,11 +8,11 @@ export function CtaBand() {
     <section className="bg-brand-deep text-on-brand">
       <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-5 py-16 sm:px-8 md:grid-cols-[1.5fr_1fr] md:py-20">
         <Reveal>
-          <h2 className="max-w-[20ch] text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="max-w-[20ch] text-3xl font-bold sm:text-4xl">
             Maschine steht? Wir sind eine Anruflänge entfernt.
           </h2>
           <p className="mt-4 max-w-[52ch] text-[16px] leading-relaxed text-on-brand/75">
-            Schildern Sie uns kurz das Problem – Sie erhalten innert 24 Stunden eine Rückmeldung
+            Schildern Sie uns kurz das Problem. Sie erhalten innert 24 Stunden eine Rückmeldung
             mit dem weiteren Vorgehen. Unkompliziert, ehrlich und ohne Callcenter.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -43,7 +43,7 @@ export function CtaBand() {
               />
             </div>
             <figcaption className="mt-3 text-[14px] text-on-brand/70">
-              Ihr direkter Draht – kein Callcenter, keine Warteschlaufe.
+              Ihr direkter Draht: kein Callcenter, keine Warteschlaufe.
             </figcaption>
           </figure>
         </Reveal>

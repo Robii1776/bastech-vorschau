@@ -40,7 +40,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between gap-6 px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="Bastech Betriebe AG – Startseite">
+        <Link href="/" className="flex items-center gap-3" aria-label="Bastech Betriebe AG, Startseite">
           <Image
             src="/images/logo.jpeg"
             alt=""
@@ -50,7 +50,7 @@ export function Header() {
             priority
           />
           <span className="leading-tight">
-            <span className="block text-[17px] font-bold tracking-tight">Bastech Betriebe AG</span>
+            <span className="block text-[17px] font-bold">Bastech Betriebe AG</span>
             <span className="hidden text-[11px] font-medium tracking-wide text-ink-soft sm:block">
               Technische Dienstleistung &amp; Handel
             </span>
@@ -148,7 +148,7 @@ export function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="block border-b border-line py-4 text-2xl font-semibold tracking-tight"
+                      className="block border-b border-line py-4 text-2xl font-semibold"
                     >
                       {item.label}
                     </Link>

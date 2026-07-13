@@ -34,7 +34,7 @@ function ContactFormInner() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `Anfrage über bastechbetriebeag.ch${data.get("anliegen") ? ` – ${data.get("anliegen")}` : ""}`,
+          subject: `Anfrage über bastechbetriebeag.ch${data.get("anliegen") ? `: ${data.get("anliegen")}` : ""}`,
           name: data.get("name"),
           firma: data.get("firma"),
           email: data.get("email"),
@@ -59,7 +59,7 @@ function ContactFormInner() {
   if (status === "success") {
     return (
       <div className="rounded-lg border border-line bg-brand-tint p-8">
-        <p className="text-xl font-bold tracking-tight text-brand-deep">Vielen Dank für Ihre Anfrage.</p>
+        <p className="text-xl font-bold text-brand-deep">Vielen Dank für Ihre Anfrage.</p>
         <p className="mt-2 max-w-[48ch] text-[15px] leading-relaxed text-ink-soft">
           Wir melden uns innert 24 Stunden bei Ihnen. In dringenden Fällen erreichen Sie uns
           direkt unter <a href="tel:+41793886768" className="font-mono font-medium text-brand">079 388 67 68</a>.

@@ -20,7 +20,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
               aria-expanded={open}
               className="flex w-full items-center justify-between gap-6 py-5 text-left"
             >
-              <span className="text-[17px] font-semibold tracking-tight">{item.q}</span>
+              <span className="text-[17px] font-semibold">{item.q}</span>
               <span
                 aria-hidden
                 className={`shrink-0 font-mono text-xl text-brand transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${

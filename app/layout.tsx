@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Barlow, Barlow_Semi_Condensed, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const plexSans = IBM_Plex_Sans({
+const barlow = Barlow({
   subsets: ["latin"],
-  variable: "--font-plex",
+  variable: "--font-barlow",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+});
+
+const barlowDisplay = Barlow_Semi_Condensed({
+  subsets: ["latin"],
+  variable: "--font-barlow-display",
+  display: "swap",
+  weight: ["600", "700"],
 });
 
 const plexMono = IBM_Plex_Mono({
@@ -22,11 +29,11 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Bastech Betriebe AG – Maschinenservice für die grafische Industrie",
+    default: "Bastech Betriebe AG | Maschinenservice für die grafische Industrie",
     template: "%s | Bastech Betriebe AG",
   },
   description:
-    "Service, Revisionen, Reparaturen und Occasionsmaschinen für Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik. Schweizweit im Einsatz – Bastech Betriebe AG, Mehlsecken LU.",
+    "Service, Revisionen, Reparaturen und Occasionsmaschinen für Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik. Schweizweit im Einsatz. Bastech Betriebe AG, Mehlsecken LU.",
   keywords: [
     "Maschinenservice",
     "Druckweiterverarbeitung",
@@ -44,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_CH",
     siteName: site.name,
-    title: "Bastech Betriebe AG – Maschinenservice für die grafische Industrie",
+    title: "Bastech Betriebe AG | Maschinenservice für die grafische Industrie",
     description:
       "Service, Revisionen, Reparaturen und Occasionsmaschinen für Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik. Schweizweit im Einsatz.",
     images: [{ url: "/images/maschine-3.jpeg", width: 1200, height: 630 }],
@@ -85,7 +92,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de-CH" className={`${plexSans.variable} ${plexMono.variable}`}>
+    <html lang="de-CH" className={`${barlow.variable} ${barlowDisplay.variable} ${plexMono.variable}`}>
       <body>
         <script
           type="application/ld+json"

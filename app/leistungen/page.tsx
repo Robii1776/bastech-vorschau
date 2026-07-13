@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Leistungen – Service, Revisionen, Reparaturen & Ersatzteile",
+  title: "Leistungen: Service, Revisionen, Reparaturen und Ersatzteile",
   description:
     "Maschinenservice für die grafische Industrie: Revisionen, mechanische Reparaturen, Ersatzteile, Handel mit Occasionsmaschinen und Neuentwicklungen. Bastech Betriebe AG, schweizweit.",
 };
@@ -16,7 +16,7 @@ const sections = [
     id: "service-revisionen",
     title: "Service & Revisionen",
     lead: "Planbare Wartung statt teurer Stillstand.",
-    text: "Regelmässige Wartung ist die günstigste Versicherung gegen Produktionsausfälle. Wir revidieren Falz-, Banderolier- und Umreifungsmaschinen komplett: zerlegen, prüfen, ersetzen, einstellen – und dokumentieren jeden Schritt.",
+    text: "Regelmässige Wartung ist die günstigste Versicherung gegen Produktionsausfälle. Wir revidieren Falz-, Banderolier- und Umreifungsmaschinen komplett: zerlegen, prüfen, ersetzen, einstellen und dokumentieren jeden Schritt.",
     points: [
       "Komplette Revisionen inklusive Verschleissteil-Ersatz",
       "Wartungspläne mit fixen Intervallen für Ihre Maschinenflotte",
@@ -30,7 +30,7 @@ const sections = [
     id: "reparaturen",
     title: "Mechanische Reparaturen",
     lead: "Schnelle Diagnose, fachgerechte Instandsetzung.",
-    text: "Wenn eine Maschine steht, zählt jede Stunde. Wir finden die Ursache statt nur das Symptom – mechanisch, pneumatisch oder steuerungsseitig – und setzen instand, vor Ort bei Ihnen oder in unserer Werkstatt.",
+    text: "Wenn eine Maschine steht, zählt jede Stunde. Wir finden die Ursache statt nur das Symptom, ob mechanisch, pneumatisch oder steuerungsseitig, und setzen instand: vor Ort bei Ihnen oder in unserer Werkstatt.",
     points: [
       "Fehlerdiagnose an Mechanik, Pneumatik und Steuerung",
       "Einsätze vor Ort in der ganzen Schweiz",
@@ -44,7 +44,7 @@ const sections = [
     id: "ersatzteile",
     title: "Ersatzteile",
     lead: "Auch für Maschinen, die offiziell keinen Support mehr haben.",
-    text: "Wir liefern Ersatz- und Verschleissteile für Druckweiterverarbeitung und Umreifungstechnik – von Müller Martini über MBO bis Tanner. Vieles ab Lager, anderes über unser Netzwerk, notfalls als Nachfertigung.",
+    text: "Wir liefern Ersatz- und Verschleissteile für Druckweiterverarbeitung und Umreifungstechnik, von Müller Martini über MBO bis Tanner. Vieles ab Lager, anderes über unser Netzwerk, notfalls als Nachfertigung.",
     points: [
       "Verschleiss- und Ersatzteile ab eigenem Lager",
       "Beschaffung über langjähriges Branchennetzwerk",
@@ -58,7 +58,7 @@ const sections = [
     id: "handel",
     title: "Handel & Occasionsmaschinen",
     lead: "Geprüfte Maschinen mit ehrlicher Zustandsbeschreibung.",
-    text: "Wir kaufen und verkaufen Maschinen für Druckweiterverarbeitung, Buchbinderei und Verpackung. Jede Occasion wird geprüft, bei Bedarf revidiert und transparent beschrieben – besichtigen und testen ausdrücklich erwünscht.",
+    text: "Wir kaufen und verkaufen Maschinen für Druckweiterverarbeitung, Buchbinderei und Verpackung. Jede Occasion wird geprüft, bei Bedarf revidiert und transparent beschrieben. Besichtigen und Testen ausdrücklich erwünscht.",
     points: [
       "An- und Verkauf von Occasionsmaschinen",
       "Revision und Prüfung vor jeder Übergabe",
@@ -89,12 +89,12 @@ export default function LeistungenPage() {
       <section className="mx-auto max-w-[1320px] px-5 pb-16 pt-10 sm:px-8 md:pt-16">
         <Reveal>
           <p className="font-mono text-[13px] font-medium text-brand">Leistungen</p>
-          <h1 className="mt-4 max-w-[22ch] text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">
+          <h1 className="mt-4 max-w-[22ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
             Technische Dienstleistung für die grafische Industrie
           </h1>
           <p className="mt-6 max-w-[58ch] text-[17px] leading-relaxed text-ink-soft">
             Von der vorbeugenden Wartung bis zur Sonderkonstruktion: Wir halten Ihre
-            Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik am Laufen – mit kurzen
+            Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik am Laufen, mit kurzen
             Wegen und einem Ansprechpartner, der die Maschinen wirklich kennt.
           </p>
         </Reveal>
@@ -127,13 +127,13 @@ export default function LeistungenPage() {
               }`}
             >
               <Reveal>
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{s.title}</h2>
+                <h2 className="text-3xl font-bold sm:text-4xl">{s.title}</h2>
                 <p className="mt-3 text-[17px] font-semibold text-brand">{s.lead}</p>
                 <p className="mt-4 max-w-[56ch] text-[16px] leading-relaxed text-ink-soft">{s.text}</p>
                 <ul className="mt-7 space-y-3">
                   {s.points.map((p) => (
                     <li key={p} className="flex items-start gap-3 text-[15px] leading-relaxed">
-                      <span aria-hidden className="mt-[11px] h-px w-6 shrink-0 bg-brand" />
+                      <span aria-hidden className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand/60" />
                       {p}
                     </li>
                   ))}
@@ -164,11 +164,11 @@ export default function LeistungenPage() {
 
       <section className="mx-auto max-w-[880px] px-5 py-16 text-center sm:px-8 md:py-20">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          <h2 className="text-2xl font-bold sm:text-3xl">
             Nicht sicher, welche Leistung Sie brauchen?
           </h2>
           <p className="mx-auto mt-3 max-w-[48ch] text-[16px] leading-relaxed text-ink-soft">
-            Rufen Sie an und schildern Sie das Problem – wir sagen Ihnen in fünf Minuten, wie wir
+            Rufen Sie an und schildern Sie das Problem. Wir sagen Ihnen in fünf Minuten, wie wir
             vorgehen würden.
           </p>
           <a

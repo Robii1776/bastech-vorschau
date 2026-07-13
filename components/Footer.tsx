@@ -7,10 +7,10 @@ export function Footer() {
       <div className="mx-auto max-w-[1320px] px-5 py-16 sm:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <p className="text-xl font-bold tracking-tight">{site.name}</p>
+            <p className="text-xl font-bold">{site.name}</p>
             <p className="mt-2 max-w-[42ch] text-[15px] leading-relaxed text-on-brand/70">
               {site.claim}. Service, Revisionen, Reparaturen und Occasionsmaschinen für die grafische
-              Industrie – von {site.address.city} aus schweizweit im Einsatz.
+              Industrie. Von {site.address.city} aus schweizweit im Einsatz.
             </p>
             <p className="mt-6 font-mono text-[13px] text-on-brand/60">UID {site.uid} · AG seit {site.founded}</p>
           </div>

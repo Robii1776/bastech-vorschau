@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Kontakt – Service anfragen",
+  title: "Kontakt und Serviceanfrage",
   description:
-    "Maschine defekt oder Frage zu einer Occasion? Kontaktieren Sie die Bastech Betriebe AG in Mehlsecken LU – Rückmeldung innert 24 Stunden. Telefon 079 388 67 68.",
+    "Maschine defekt oder Frage zu einer Occasion? Kontaktieren Sie die Bastech Betriebe AG in Mehlsecken LU. Rückmeldung innert 24 Stunden. Telefon 079 388 67 68.",
 };
 
 export default function KontaktPage() {
@@ -15,7 +15,7 @@ export default function KontaktPage() {
       <section className="mx-auto max-w-[1320px] px-5 pb-20 pt-10 sm:px-8 md:pt-16">
         <Reveal>
           <p className="font-mono text-[13px] font-medium text-brand">Kontakt</p>
-          <h1 className="mt-4 max-w-[20ch] text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">
+          <h1 className="mt-4 max-w-[20ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
             Schildern Sie uns Ihr Anliegen
           </h1>
           <p className="mt-6 max-w-[54ch] text-[17px] leading-relaxed text-ink-soft">

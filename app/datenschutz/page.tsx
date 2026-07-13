@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 export default function DatenschutzPage() {
   return (
     <section className="mx-auto max-w-[760px] px-5 pb-24 pt-10 sm:px-8 md:pt-16">
-      <h1 className="text-4xl font-bold tracking-tight">Datenschutzerklärung</h1>
+      <h1 className="text-4xl font-bold">Datenschutzerklärung</h1>
       <p className="mt-4 text-[15px] text-ink-soft">Stand: Juli 2026</p>
 
       <div className="mt-10 space-y-8 text-[16px] leading-relaxed text-ink-soft">
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">1. Verantwortliche Stelle</h2>
+          <h2 className="text-lg font-bold text-ink">1. Verantwortliche Stelle</h2>
           <p className="mt-3">
             {site.name}, {site.address.street}, {site.address.zip} {site.address.city},{" "}
             {site.address.country}. Bei Fragen zum Datenschutz erreichen Sie uns unter{" "}
@@ -24,7 +24,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">2. Grundsatz</h2>
+          <h2 className="text-lg font-bold text-ink">2. Grundsatz</h2>
           <p className="mt-3">
             Wir bearbeiten Personendaten gemäss dem schweizerischen Datenschutzgesetz (DSG). Wir
             erheben nur Daten, die für die Bearbeitung Ihrer Anfrage oder den Betrieb dieser
@@ -33,7 +33,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">3. Kontaktformular</h2>
+          <h2 className="text-lg font-bold text-ink">3. Kontaktformular</h2>
           <p className="mt-3">
             Wenn Sie unser Kontaktformular nutzen, werden die von Ihnen angegebenen Daten (Name,
             Firma, E-Mail, Telefon, Nachricht) zur Bearbeitung Ihrer Anfrage an uns übermittelt.
@@ -44,7 +44,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">4. Server-Logdaten</h2>
+          <h2 className="text-lg font-bold text-ink">4. Server-Logdaten</h2>
           <p className="mt-3">
             Beim Aufruf dieser Website können durch den Hosting-Anbieter technisch bedingte Daten
             (IP-Adresse, Datum, Uhrzeit, aufgerufene Seite, Browsertyp) in Logdateien gespeichert
@@ -54,7 +54,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">5. Externe Inhalte</h2>
+          <h2 className="text-lg font-bold text-ink">5. Externe Inhalte</h2>
           <p className="mt-3">
             Auf der Kontaktseite ist eine Karte von Google Maps eingebunden. Beim Laden der Karte
             werden Daten (u.a. Ihre IP-Adresse) an Google übermittelt. Anbieter: Google Ireland
@@ -63,7 +63,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">6. Cookies &amp; Tracking</h2>
+          <h2 className="text-lg font-bold text-ink">6. Cookies &amp; Tracking</h2>
           <p className="mt-3">
             Diese Website verwendet keine Tracking-Cookies und keine Analysedienste, die
             Personendaten erheben.
@@ -71,7 +71,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">7. Ihre Rechte</h2>
+          <h2 className="text-lg font-bold text-ink">7. Ihre Rechte</h2>
           <p className="mt-3">
             Sie haben das Recht auf Auskunft über Ihre bei uns gespeicherten Personendaten sowie
             auf deren Berichtigung oder Löschung. Wenden Sie sich dazu an{" "}
@@ -80,7 +80,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-ink">8. Änderungen</h2>
+          <h2 className="text-lg font-bold text-ink">8. Änderungen</h2>
           <p className="mt-3">
             Wir können diese Datenschutzerklärung jederzeit anpassen. Es gilt die jeweils auf
             dieser Website publizierte Fassung.

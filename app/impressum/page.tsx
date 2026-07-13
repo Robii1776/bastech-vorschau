@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <section className="mx-auto max-w-[760px] px-5 pb-24 pt-10 sm:px-8 md:pt-16">
-      <h1 className="text-4xl font-bold tracking-tight">Impressum</h1>
+      <h1 className="text-4xl font-bold">Impressum</h1>
 
       <div className="mt-10 space-y-8 text-[16px] leading-relaxed">
         <div>
-          <h2 className="text-lg font-bold tracking-tight">Verantwortlich für den Inhalt</h2>
+          <h2 className="text-lg font-bold">Verantwortlich für den Inhalt</h2>
           <address className="mt-3 not-italic text-ink-soft">
             {site.name}
             <br />
@@ -27,7 +27,7 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight">Kontakt</h2>
+          <h2 className="text-lg font-bold">Kontakt</h2>
           <p className="mt-3 text-ink-soft">
             Telefon: <a href={site.phoneHref} className="font-mono text-brand">{site.phone}</a>
             <br />
@@ -36,7 +36,7 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight">Handelsregister</h2>
+          <h2 className="text-lg font-bold">Handelsregister</h2>
           <p className="mt-3 text-ink-soft">
             Eingetragen im Handelsregister des Kantons Luzern
             <br />
@@ -47,7 +47,7 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight">Haftungsausschluss</h2>
+          <h2 className="text-lg font-bold">Haftungsausschluss</h2>
           <p className="mt-3 text-ink-soft">
             Die Inhalte dieser Website wurden mit grösstmöglicher Sorgfalt erstellt. Die
             {" "}{site.name} übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und
@@ -58,7 +58,7 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold tracking-tight">Urheberrechte</h2>
+          <h2 className="text-lg font-bold">Urheberrechte</h2>
           <p className="mt-3 text-ink-soft">
             Die auf dieser Website veröffentlichten Inhalte, Bilder und Texte unterliegen dem
             schweizerischen Urheberrecht. Jede Verwertung ausserhalb der Grenzen des

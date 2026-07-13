@@ -9,7 +9,7 @@ export function MachineCard({ machine }: { machine: Machine }) {
         {machine.image ? (
           <Image
             src={machine.image}
-            alt={`${machine.name} – ${machine.category}`}
+            alt={`${machine.name}, ${machine.category}`}
             fill
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 320px"
             className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
@@ -25,7 +25,7 @@ export function MachineCard({ machine }: { machine: Machine }) {
           {machine.category}
           {machine.year ? ` · ${machine.year}` : ""}
         </p>
-        <h3 className="mt-1.5 text-lg font-bold tracking-tight">{machine.name}</h3>
+        <h3 className="mt-1.5 text-lg font-bold">{machine.name}</h3>
         {machine.note && (
           <p className="mt-1.5 text-[14px] leading-relaxed text-ink-soft">{machine.note}</p>
         )}
