@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Markenfarbe aus dem bestehenden Bastech-Logo abgeleitet */
+  --color-bg: oklch(98.6% 0.002 247);
+  --color-surface: oklch(96.2% 0.005 247);
+  --color-ink: oklch(23% 0.025 255);
+  --color-ink-soft: oklch(42% 0.02 255);
+  --color-line: oklch(89% 0.008 250);
+  --color-brand: oklch(45% 0.088 253);
+  --color-brand-deep: oklch(29% 0.058 255);
+  --color-brand-tint: oklch(93.5% 0.018 250);
+  --color-on-brand: oklch(98% 0.005 250);
+
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Tastbares Feedback auf allen klickbaren Elementen */
+.pressable {
+  transition: transform 160ms var(--ease-out-strong);
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+/* Sanfte Bild-Reveals ohne Layout-Shift */
+.img-frame {
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
