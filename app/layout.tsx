@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Archivo, JetBrains_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const archivo = Archivo({
+const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-archivo",
+  variable: "--font-plex",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const jetbrains = JetBrains_Mono({
+const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
+  variable: "--font-plex-mono",
   display: "swap",
   weight: ["400", "500"],
 });
@@ -84,7 +85,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de-CH" className={`${archivo.variable} ${jetbrains.variable}`}>
+    <html lang="de-CH" className={`${plexSans.variable} ${plexMono.variable}`}>
       <body>
         <script
           type="application/ld+json"

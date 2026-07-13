@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, StaggerList } from "@/components/Reveal";
+import { ImageReveal } from "@/components/ImageReveal";
+import { BrandMarquee } from "@/components/BrandMarquee";
 import { MachineCard } from "@/components/MachineCard";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq, type FaqItem } from "@/components/Faq";
@@ -75,10 +77,11 @@ export default function HomePage() {
       <section className="mx-auto max-w-[1320px] px-5 pb-20 pt-10 sm:px-8 md:pb-28 md:pt-16">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
           <Reveal>
-            <p className="font-mono text-[13px] font-medium text-brand">
-              Mehlsecken LU · schweizweit im Einsatz
+            <p className="flex items-center gap-3 text-[14px] font-medium text-ink-soft">
+              <span aria-hidden className="h-px w-7 bg-brand" />
+              Maschinenservice aus Mehlsecken LU, schweizweit im Einsatz
             </p>
-            <h1 className="mt-4 max-w-[16ch] text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 max-w-[16ch] text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl">
               Ihre Maschinen sollen laufen. Dafür sorgen wir.
             </h1>
             <p className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-ink-soft">
@@ -114,23 +117,27 @@ export default function HomePage() {
             </dl>
           </Reveal>
 
-          <Reveal delay={0.15} y={32} className="relative">
-            <div className="img-frame relative aspect-[3/4] max-h-[560px] w-full rounded-lg">
-              <Image
-                src="/images/hero-1.jpg"
-                alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
-                fill
-                priority
-                sizes="(max-width: 1024px) 90vw, 560px"
-                className="rounded-lg object-cover"
-              />
-            </div>
+          <Reveal delay={0.15} y={0} className="relative">
+            <ImageReveal className="img-frame relative aspect-[3/4] max-h-[560px] w-full rounded-lg">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/images/hero-1.jpg"
+                  alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 90vw, 560px"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </ImageReveal>
             <p className="mt-3 font-mono text-[12px] text-ink-soft">
               Tanner US-2000 – revidiert &amp; einsatzbereit
             </p>
           </Reveal>
         </div>
       </section>
+
+      <BrandMarquee />
 
       {/* Leistungen */}
       <section className="border-y border-line bg-surface">
@@ -202,8 +209,8 @@ export default function HomePage() {
       {/* Warum Bastech */}
       <section className="border-y border-line bg-surface">
         <div className="mx-auto grid max-w-[1320px] items-center gap-12 px-5 py-20 sm:px-8 md:py-24 lg:grid-cols-[1fr_1.1fr]">
-          <Reveal className="order-2 lg:order-1">
-            <div className="img-frame relative aspect-[4/5] max-h-[520px] rounded-lg">
+          <ImageReveal className="order-2 lg:order-1 img-frame relative aspect-[4/5] max-h-[520px] rounded-lg">
+            <div className="relative h-full w-full">
               <Image
                 src="/images/maschine-2.jpeg"
                 alt="Revidierter Anleger mit Bastech Betriebe AG Typenschild"
@@ -212,7 +219,7 @@ export default function HomePage() {
                 className="rounded-lg object-cover"
               />
             </div>
-          </Reveal>
+          </ImageReveal>
 
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <h2 className="max-w-[18ch] text-3xl font-bold tracking-tight sm:text-4xl">

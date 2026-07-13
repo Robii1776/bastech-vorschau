@@ -59,7 +59,12 @@ Der Inhalt von `./out` kann direkt auf jeden Webspace hochgeladen werden.
 
 ## Design-Grundlagen
 
-- Markenfarbe aus dem bestehenden Logo abgeleitet (Blau, OKLCH), Schrift Archivo + JetBrains Mono
-- Animationen: Scroll-Reveals, Stagger-Listen, Akkordeon (Motion) –
-  alle mit `prefers-reduced-motion`-Fallback
+- Markenfarbe aus dem bestehenden Logo abgeleitet (Blau, OKLCH)
+- Schrift: IBM Plex Sans + IBM Plex Mono (Ingenieurs-Charakter, bewusst kein
+  AI-Standard-Font; „bold“ global auf 600 abgeschwächt)
+- Animationen: Scroll-Reveals, Clip-Path-Bildreveals, Stagger-Listen,
+  Hersteller-Marquee (reines CSS), Nav-Underlines, Akkordeon (Motion) –
+  alle mit `prefers-reduced-motion`- und Hintergrund-Tab-Fallback
 - Design-Tokens zentral in `app/globals.css` (`@theme`)
+- Bewusst ohne Three.js/3D gehalten (Seriosität + Ladezeit); Option für später:
+  360°-Ansichten der Occasionsmaschinen

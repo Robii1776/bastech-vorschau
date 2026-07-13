@@ -65,7 +65,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={`relative text-[15px] font-medium transition-colors duration-200 hover:text-brand ${
-                  active ? "text-brand" : "text-ink"
+                  active ? "text-brand" : "link-underline text-ink"
                 }`}
               >
                 {item.label}

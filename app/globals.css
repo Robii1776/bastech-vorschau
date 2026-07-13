@@ -12,8 +12,11 @@
   --color-brand-tint: oklch(93.5% 0.018 250);
   --color-on-brand: oklch(98% 0.005 250);
 
-  --font-sans: var(--font-archivo), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-sans: var(--font-plex), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  /* IBM Plex wirkt in 600 präziser als in 700 – "bold" global abschwächen */
+  --font-weight-bold: 600;
 
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
@@ -41,6 +44,7 @@ h1,
 h2,
 h3 {
   text-wrap: balance;
+  letter-spacing: -0.015em;
 }
 
 p {
@@ -64,6 +68,56 @@ p {
 .img-frame {
   overflow: hidden;
   background: var(--color-surface);
+}
+
+/* Nav-Links: Unterstrich wächst von links (nur echte Pointer-Geräte) */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  background: var(--color-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms var(--ease-out-strong);
+}
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Hersteller-Marquee: konstante, ruhige Bewegung (linear) */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 46s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
