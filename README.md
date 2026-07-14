@@ -88,9 +88,10 @@ mit Serverfunktion und API-Key, ca. Fr. 5–20/Monat je nach Nutzung.
 
 ## Design-Grundlagen
 
-- Markenfarbe aus dem bestehenden Logo abgeleitet (Blau, OKLCH)
-- Schrift: IBM Plex Sans + IBM Plex Mono (Ingenieurs-Charakter, bewusst kein
-  AI-Standard-Font; „bold“ global auf 600 abgeschwächt)
+- Markenfarbe aus dem bestehenden Logo abgeleitet (Blau, OKLCH),
+  Logo-Vektordaten unter `assets/bastech-logo.pdf`
+- Schrift: Archivo Variable, eine Familie mit Breitenachse
+  (Titel Expanded 800, Text normal, Zahlen tabellarisch)
 - Animationen: Scroll-Reveals, Clip-Path-Bildreveals, Stagger-Listen,
   Hersteller-Marquee (reines CSS), Nav-Underlines, Akkordeon (Motion) –
   alle mit `prefers-reduced-motion`- und Hintergrund-Tab-Fallback
