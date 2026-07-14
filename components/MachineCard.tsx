@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Machine } from "@/lib/machines";
+import { ArrowRightIcon } from "@/components/Icons";
 
 export function MachineCard({ machine }: { machine: Machine }) {
   return (
@@ -16,12 +17,12 @@ export function MachineCard({ machine }: { machine: Machine }) {
           />
         ) : (
           <div className="flex h-full items-center justify-center bg-surface">
-            <span className="font-mono text-[13px] text-ink-soft">Foto auf Anfrage</span>
+            <span className="tabular-nums text-[13px] text-ink-soft">Foto auf Anfrage</span>
           </div>
         )}
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <p className="font-mono text-[12px] uppercase tracking-wide text-ink-soft">
+        <p className="tabular-nums text-[12px] uppercase tracking-wide text-ink-soft">
           {machine.category}
           {machine.year ? ` · ${machine.year}` : ""}
         </p>
@@ -30,12 +31,13 @@ export function MachineCard({ machine }: { machine: Machine }) {
           <p className="mt-1.5 text-[14px] leading-relaxed text-ink-soft">{machine.note}</p>
         )}
         <div className="mt-auto flex items-center justify-between pt-4">
-          <span className="font-mono text-[14px] font-medium">{machine.price ?? "Preis auf Anfrage"}</span>
+          <span className="tabular-nums text-[14px] font-medium">{machine.price ?? "Preis auf Anfrage"}</span>
           <Link
             href={`/kontakt/?betreff=${encodeURIComponent(machine.name)}`}
-            className="text-[14px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
+            className="group/link inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
           >
-            Anfragen →
+            Anfragen
+            <ArrowRightIcon size={14} className="transition-transform duration-200 group-hover/link:translate-x-0.5" />
           </Link>
         </div>
       </div>

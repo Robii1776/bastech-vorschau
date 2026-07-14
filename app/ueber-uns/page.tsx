@@ -16,7 +16,7 @@ export default function UeberUnsPage() {
       <section className="mx-auto max-w-[1320px] px-5 pb-20 pt-10 sm:px-8 md:pt-16">
         <div className="grid items-start gap-12 lg:grid-cols-[1.2fr_1fr]">
           <Reveal>
-            <p className="font-mono text-[13px] font-medium text-brand">Über uns</p>
+            <p className="tabular-nums text-[13px] font-medium text-brand">Über uns</p>
             <h1 className="mt-4 max-w-[18ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
               Handwerk, das Maschinen am Leben hält
             </h1>
@@ -50,7 +50,7 @@ export default function UeberUnsPage() {
               ].map(([label, value]) => (
                 <div key={label}>
                   <dt className="text-[13px] font-medium text-ink-soft">{label}</dt>
-                  <dd className="mt-0.5 font-mono text-[16px] font-medium">{value}</dd>
+                  <dd className="mt-0.5 tabular-nums text-[16px] font-medium">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -128,7 +128,7 @@ export default function UeberUnsPage() {
               Werkstatt-Arbeiten erledigen wir bei uns, Einsätze vor Ort direkt in Ihrer
               Produktion.
             </p>
-            <p className="mt-4 font-mono text-[14px] text-ink-soft">
+            <p className="mt-4 tabular-nums text-[14px] text-ink-soft">
               {site.address.street} · {site.address.zip} {site.address.city} · Kanton Luzern
             </p>
           </Reveal>

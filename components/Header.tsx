@@ -81,7 +81,7 @@ export function Header() {
         <div className="hidden items-center gap-5 lg:flex">
           <a
             href={site.phoneHref}
-            className="font-mono text-[14px] font-medium text-ink-soft transition-colors duration-200 hover:text-brand"
+            className="tabular-nums text-[14px] font-medium text-ink-soft transition-colors duration-200 hover:text-brand"
           >
             {site.phone}
           </a>
@@ -161,7 +161,7 @@ export function Header() {
               >
                 <a
                   href={site.phoneHref}
-                  className="block font-mono text-lg font-medium text-brand"
+                  className="block tabular-nums text-lg font-medium text-brand"
                 >
                   {site.phone}
                 </a>

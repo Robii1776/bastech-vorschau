@@ -29,7 +29,7 @@ export default function ImpressumPage() {
         <div>
           <h2 className="text-lg font-bold">Kontakt</h2>
           <p className="mt-3 text-ink-soft">
-            Telefon: <a href={site.phoneHref} className="font-mono text-brand">{site.phone}</a>
+            Telefon: <a href={site.phoneHref} className="tabular-nums text-brand">{site.phone}</a>
             <br />
             E-Mail: <a href={`mailto:${site.email}`} className="text-brand">{site.email}</a>
           </p>

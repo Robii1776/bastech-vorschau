@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Reveal, StaggerList } from "@/components/Reveal";
 import { ImageReveal } from "@/components/ImageReveal";
 import { BrandMarquee } from "@/components/BrandMarquee";
+import { KineticBand } from "@/components/KineticBand";
+import { ArrowRightIcon } from "@/components/Icons";
 import { MachineCard } from "@/components/MachineCard";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq, type FaqItem } from "@/components/Faq";
@@ -78,8 +80,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1320px] px-5 pt-14 sm:px-8 md:pt-20">
           <div className="grid items-center gap-12 pb-16 md:pb-20 lg:grid-cols-[1.2fr_1fr]">
             <Reveal>
-              <p className="font-mono text-[13px] uppercase tracking-wider text-on-brand/60">
-                Maschinenservice für die grafische Industrie · seit {site.founded}
+              <p className="text-[15px] font-semibold text-on-brand/65">
+                Maschinenservice für die grafische Industrie, seit {site.founded}
               </p>
               <h1 className="mt-5 max-w-[14ch] text-5xl sm:text-6xl lg:text-7xl">
                 Maschine steht? <span className="text-brand-soft">Wir bringen sie zum Laufen.</span>
@@ -92,7 +94,7 @@ export default function HomePage() {
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a
                   href={site.phoneHref}
-                  className="pressable rounded-md bg-white px-7 py-4 font-mono text-[17px] font-medium text-brand-deep transition-opacity duration-200 hover:opacity-90"
+                  className="pressable tabular-nums rounded-md bg-white px-7 py-4 text-[17px] font-bold text-brand-deep transition-opacity duration-200 hover:opacity-90"
                 >
                   {site.phone}
                 </a>
@@ -103,23 +105,20 @@ export default function HomePage() {
                   Service anfragen
                 </Link>
               </div>
-              <p className="mt-6 font-mono text-[13px] text-on-brand/60">
-                Rückmeldung unter 24 h · Werkstatt und Vor-Ort-Einsätze
+              <p className="mt-6 text-[14px] font-medium text-on-brand/60">
+                Rückmeldung unter 24 Stunden. Werkstatt in Mehlsecken, Einsätze in der ganzen Schweiz.
               </p>
               <Link
                 href="/maschinen/"
-                className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2 text-[14px] font-semibold text-on-brand transition-colors duration-200 hover:bg-white hover:text-brand-deep"
+                className="group mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-brand-soft transition-colors duration-200 hover:text-on-brand"
               >
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute h-full w-full animate-ping rounded-full bg-brand-soft opacity-70" />
-                  <span className="relative h-2 w-2 rounded-full bg-brand-soft" />
-                </span>
-                {machines.length} Occasionsmaschinen aktuell verfügbar
+                {machines.length} Occasionsmaschinen ab Lager verfügbar
+                <ArrowRightIcon size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </Reveal>
 
             <Reveal delay={0.15} y={0} className="relative">
-              <ImageReveal className="img-frame relative aspect-[3/4] max-h-[540px] w-full rounded-lg">
+              <ImageReveal className="img-frame duotone relative aspect-[3/4] max-h-[540px] w-full rounded-lg">
                 <div className="relative h-full w-full">
                   <Image
                     src="/images/hero-1.jpg"
@@ -131,14 +130,15 @@ export default function HomePage() {
                   />
                 </div>
               </ImageReveal>
-              <p className="mt-3 font-mono text-[12px] text-on-brand/60">
+              <p className="mt-3 text-[13px] text-on-brand/55">
                 Tanner US-2000, revidiert und einsatzbereit
               </p>
             </Reveal>
           </div>
         </div>
-        <BrandMarquee dark />
       </section>
+
+      <BrandMarquee />
 
       {/* Leistungen */}
       <section className="border-y border-line bg-surface">
@@ -151,7 +151,7 @@ export default function HomePage() {
               href="/leistungen/"
               className="text-[15px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
             >
-              Alle Leistungen →
+              Alle Leistungen
             </Link>
           </Reveal>
 
@@ -167,17 +167,17 @@ export default function HomePage() {
                   {s.title}
                 </h3>
                 <p className="max-w-[64ch] text-[15px] leading-relaxed text-ink-soft">{s.text}</p>
-                <span
-                  aria-hidden
-                  className="hidden font-mono text-lg text-brand opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 sm:block"
-                >
-                  →
-                </span>
+                <ArrowRightIcon
+                  size={18}
+                  className="hidden text-brand opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 sm:block"
+                />
               </Link>
             ))}
           />
         </div>
       </section>
+
+      <KineticBand />
 
       {/* Occasionsmaschinen */}
       <section className="mx-auto max-w-[1320px] px-5 py-20 sm:px-8 md:py-24">
@@ -194,7 +194,7 @@ export default function HomePage() {
             href="/maschinen/"
             className="text-[15px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
           >
-            Alle Maschinen →
+            Alle Maschinen
           </Link>
         </Reveal>
 
@@ -247,18 +247,61 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <blockquote className="mt-10 rounded-lg bg-brand-tint p-6">
-              <p className="text-[16px] font-medium leading-relaxed text-brand-deep">
-                «Beeindruckende Einsatzbereitschaft und Flexibilität, enormes Fachwissen.
-                Ein Allrounder mit lösungsorientiertem Handeln.»
-              </p>
-              <footer className="mt-3 text-[14px] text-ink-soft">
-                <span className="font-semibold text-ink">Patrick Näther</span>, Leiter Technischer
-                Support, Swissprinters AG, Zofingen
-              </footer>
-            </blockquote>
           </Reveal>
         </div>
+      </section>
+
+      {/* Referenzen */}
+      <section id="referenzen" className="mx-auto max-w-[1320px] px-5 py-20 sm:px-8 md:py-24">
+        <Reveal>
+          <h2 className="text-3xl sm:text-4xl">Referenzen</h2>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <blockquote className="mt-10 max-w-[46ch]">
+            <p className="text-2xl font-bold leading-snug text-brand-deep sm:text-3xl">
+              «Beeindruckende Einsatzbereitschaft und Flexibilität, enormes Fachwissen. Ein
+              Allrounder mit lösungsorientiertem Handeln.»
+            </p>
+            <footer className="mt-5 text-[15px] text-ink-soft">
+              <span className="font-semibold text-ink">Patrick Näther</span>, Leiter Technischer
+              Support, Swissprinters AG, Zofingen
+            </footer>
+          </blockquote>
+        </Reveal>
+
+        {/* TODO Übergabe: durch echte Referenzberichte des Kunden ersetzen */}
+        <StaggerList
+          className="mt-14 grid gap-10 border-t border-line pt-10 md:grid-cols-3"
+          items={[
+            [
+              "Tanner US-2000",
+              "Ultraschall-Banderoliermaschinen komplett revidiert",
+              "Mehrere Einheiten geprüft, überholt und wieder im Kundeneinsatz.",
+            ],
+            [
+              "Strapex SMG 10",
+              "Umreifungsautomat hochwertig überarbeitet",
+              "Vom Occasionskauf bis zur Inbetriebnahme aus einer Hand.",
+            ],
+            [
+              "Stenz Feeder",
+              "Kuvertanleger instandgesetzt und ergänzt",
+              "Mit Auslageband aufgebaut, eingestellt und übergeben.",
+            ],
+          ].map(([machine, task, result]) => (
+            <article key={machine}>
+              <h3 className="text-lg">{machine}</h3>
+              <p className="mt-1 text-[15px] font-semibold text-brand">{task}</p>
+              <p className="mt-2 max-w-[40ch] text-[15px] leading-relaxed text-ink-soft">{result}</p>
+            </article>
+          ))}
+        />
+        <Reveal className="mt-10">
+          <p className="text-[14px] text-ink-soft">
+            Weitere Referenzberichte folgen laufend. Fragen Sie uns nach Ansprechpartnern in
+            Ihrer Branche.
+          </p>
+        </Reveal>
       </section>
 
       {/* Ablauf */}
@@ -297,7 +340,7 @@ export default function HomePage() {
             ],
           ].map(([num, title, text]) => (
             <div key={num}>
-              <p className="font-mono text-[15px] font-medium text-brand">{num}</p>
+              <p className="tabular-nums text-[15px] font-medium text-brand">{num}</p>
               <h3 className="mt-2 text-lg font-bold">{title}</h3>
               <p className="mt-2 max-w-[38ch] text-[15px] leading-relaxed text-ink-soft">{text}</p>
             </div>
@@ -306,7 +349,7 @@ export default function HomePage() {
         <Reveal className="mt-12 flex flex-wrap items-center gap-4">
           <a
             href={site.phoneHref}
-            className="pressable rounded-md bg-brand px-7 py-4 font-mono text-[16px] font-medium text-on-brand transition-colors duration-200 hover:bg-brand-deep"
+            className="pressable rounded-md bg-brand px-7 py-4 tabular-nums text-[16px] font-medium text-on-brand transition-colors duration-200 hover:bg-brand-deep"
           >
             {site.phone}
           </a>
@@ -328,7 +371,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold sm:text-4xl">Häufige Fragen</h2>
           <p className="mt-3 max-w-[56ch] text-[16px] leading-relaxed text-ink-soft">
             Kurz und ehrlich beantwortet. Für alles andere:{" "}
-            <a href={site.phoneHref} className="font-mono font-medium text-brand">
+            <a href={site.phoneHref} className="tabular-nums font-medium text-brand">
               {site.phone}
             </a>
           </p>

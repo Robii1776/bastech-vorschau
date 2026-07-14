@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { PlusIcon } from "@/components/Icons";
 
 export type FaqItem = { q: string; a: string };
 
@@ -23,11 +24,11 @@ export function Faq({ items }: { items: FaqItem[] }) {
               <span className="text-[17px] font-semibold">{item.q}</span>
               <span
                 aria-hidden
-                className={`shrink-0 font-mono text-xl text-brand transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+                className={`shrink-0 text-brand transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${
                   open ? "rotate-45" : ""
                 }`}
               >
-                +
+                <PlusIcon size={20} />
               </span>
             </button>
             <AnimatePresence initial={false}>

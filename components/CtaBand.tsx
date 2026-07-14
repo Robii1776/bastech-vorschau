@@ -18,7 +18,7 @@ export function CtaBand() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href={site.phoneHref}
-              className="pressable rounded-md bg-on-brand px-6 py-3.5 font-mono text-[16px] font-medium text-brand-deep transition-opacity duration-200 hover:opacity-90"
+              className="pressable rounded-md bg-on-brand px-6 py-3.5 tabular-nums text-[16px] font-medium text-brand-deep transition-opacity duration-200 hover:opacity-90"
             >
               {site.phone}
             </a>

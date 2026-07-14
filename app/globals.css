@@ -12,14 +12,9 @@
   --color-brand-tint: oklch(93.5% 0.018 250);
   --color-on-brand: oklch(98% 0.005 250);
 
-  /* Typografie-Konzept "Werkstatt-Plakat":
-     Anton (kondensierte Plakatschrift, Versalien) für grosse Titel,
-     Barlow Semi Condensed für Zwischentitel (Typenschild-Charakter),
-     Barlow für Text, IBM Plex Mono für Preise, Nummern, Technik-Daten. */
-  --font-sans: var(--font-barlow), system-ui, sans-serif;
-  --font-poster: var(--font-anton), var(--font-barlow), system-ui, sans-serif;
-  --font-display: var(--font-barlow-display), var(--font-barlow), system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  /* Typografie: Archivo Variable, Kontrast über die Breitenachse.
+     Titel expanded + schwer, Text normal, Zahlen tabellarisch. */
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
 
   --color-brand-soft: oklch(80% 0.05 250);
 
@@ -50,18 +45,23 @@ body {
 
 h1,
 h2 {
-  font-family: var(--font-poster);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.012em;
-  line-height: 1.04;
+  font-weight: 800;
+  font-stretch: 122%;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
   text-wrap: balance;
 }
 
 h3 {
-  font-family: var(--font-display);
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: -0.005em;
   text-wrap: balance;
-  letter-spacing: 0;
+}
+
+/* Zahlen laufen tabellarisch, damit Preise und Nummern ruhig stehen */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }
 
 p {
@@ -107,6 +107,51 @@ p {
 @media (hover: hover) and (pointer: fine) {
   .link-underline:hover::after {
     transform: scaleX(1);
+  }
+}
+
+/* Duotone-Bildbehandlung: Graustufen über Markenblau, wirkt wie ein
+   durchgängig art-direktiertes Fotokonzept */
+.duotone {
+  background: var(--color-brand-deep);
+}
+.duotone img {
+  filter: grayscale(100%) contrast(1.06) brightness(1.04);
+  mix-blend-mode: luminosity;
+}
+
+/* Kinetisches Textband: Umriss-Typo, langsam laufend */
+.kinetic-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 70s linear infinite;
+  white-space: nowrap;
+  font-weight: 800;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in oklch, var(--color-brand) 38%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-track {
+    animation: none;
+  }
+}
+
+/* Logo-Leiste: Graustufen, volle Farbe bei Hover */
+.logo-strip img {
+  height: 26px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 250ms var(--ease-out-strong), opacity 250ms var(--ease-out-strong);
+}
+@media (hover: hover) and (pointer: fine) {
+  .logo-strip img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
   }
 }
 

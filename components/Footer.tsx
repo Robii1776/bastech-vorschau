@@ -12,7 +12,7 @@ export function Footer() {
               {site.claim}. Service, Revisionen, Reparaturen und Occasionsmaschinen für die grafische
               Industrie. Von {site.address.city} aus schweizweit im Einsatz.
             </p>
-            <p className="mt-6 font-mono text-[13px] text-on-brand/60">UID {site.uid} · AG seit {site.founded}</p>
+            <p className="mt-6 tabular-nums text-[13px] text-on-brand/60">UID {site.uid} · AG seit {site.founded}</p>
           </div>
 
           <nav aria-label="Footer-Navigation">
@@ -38,12 +38,12 @@ export function Footer() {
                 {site.address.street}, {site.address.zip} {site.address.city}
               </li>
               <li>
-                <a href={site.phoneHref} className="font-mono transition-colors duration-200 hover:text-on-brand">
+                <a href={site.phoneHref} className="tabular-nums transition-colors duration-200 hover:text-on-brand">
                   {site.phone}
                 </a>
               </li>
               <li>
-                <a href={site.phone2Href} className="font-mono transition-colors duration-200 hover:text-on-brand">
+                <a href={site.phone2Href} className="tabular-nums transition-colors duration-200 hover:text-on-brand">
                   {site.phone2}
                 </a>
               </li>

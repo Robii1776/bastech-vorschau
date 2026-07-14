@@ -1,37 +1,22 @@
 import type { Metadata } from "next";
-import { Anton, Barlow, Barlow_Semi_Condensed, IBM_Plex_Mono } from "next/font/google";
+import { Archivo } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileActionBar } from "@/components/MobileActionBar";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const anton = Anton({
+/**
+ * Eine einzige Familie, Kontrast über die Breitenachse:
+ * Archivo Variable (wdth 62–125). Display = Expanded 800,
+ * Text = Normalbreite. Wirkt konstruiert wie ein Maschinenbau-CI,
+ * ohne zweite Schrift und ohne Mono-Zahlen.
+ */
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-anton",
+  variable: "--font-archivo",
   display: "swap",
-  weight: "400",
-});
-
-const barlow = Barlow({
-  subsets: ["latin"],
-  variable: "--font-barlow",
-  display: "swap",
-  weight: ["400", "500", "600"],
-});
-
-const barlowDisplay = Barlow_Semi_Condensed({
-  subsets: ["latin"],
-  variable: "--font-barlow-display",
-  display: "swap",
-  weight: ["600", "700"],
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-plex-mono",
-  display: "swap",
-  weight: ["400", "500"],
+  axes: ["wdth"],
 });
 
 export const metadata: Metadata = {
@@ -100,10 +85,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="de-CH"
-      className={`${anton.variable} ${barlow.variable} ${barlowDisplay.variable} ${plexMono.variable}`}
-    >
+    <html lang="de-CH" className={archivo.variable}>
       <body>
         <script
           type="application/ld+json"

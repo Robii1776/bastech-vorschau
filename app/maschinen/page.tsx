@@ -17,7 +17,7 @@ export default function MaschinenPage() {
     <>
       <section className="mx-auto max-w-[1320px] px-5 pb-16 pt-10 sm:px-8 md:pt-16">
         <Reveal>
-          <p className="font-mono text-[13px] font-medium text-brand">Occasionsmaschinen</p>
+          <p className="tabular-nums text-[13px] font-medium text-brand">Occasionsmaschinen</p>
           <h1 className="mt-4 max-w-[20ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
             Geprüfte Maschinen, ehrlich beschrieben
           </h1>
@@ -62,7 +62,7 @@ export default function MaschinenPage() {
                       className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3"
                     >
                       <span className="text-[15px]">{item.name}</span>
-                      <span className="font-mono text-[13px] text-ink-soft">{item.price}</span>
+                      <span className="tabular-nums text-[13px] text-ink-soft">{item.price}</span>
                     </li>
                   ))}
                 </ul>

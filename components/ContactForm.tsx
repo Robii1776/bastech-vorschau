@@ -62,7 +62,7 @@ function ContactFormInner() {
         <p className="text-xl font-bold text-brand-deep">Vielen Dank für Ihre Anfrage.</p>
         <p className="mt-2 max-w-[48ch] text-[15px] leading-relaxed text-ink-soft">
           Wir melden uns innert 24 Stunden bei Ihnen. In dringenden Fällen erreichen Sie uns
-          direkt unter <a href="tel:+41793886768" className="font-mono font-medium text-brand">079 388 67 68</a>.
+          direkt unter <a href="tel:+41793886768" className="tabular-nums font-medium text-brand">079 388 67 68</a>.
         </p>
       </div>
     );

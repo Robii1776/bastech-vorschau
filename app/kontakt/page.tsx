@@ -14,7 +14,7 @@ export default function KontaktPage() {
     <>
       <section className="mx-auto max-w-[1320px] px-5 pb-20 pt-10 sm:px-8 md:pt-16">
         <Reveal>
-          <p className="font-mono text-[13px] font-medium text-brand">Kontakt</p>
+          <p className="tabular-nums text-[13px] font-medium text-brand">Kontakt</p>
           <h1 className="mt-4 max-w-[20ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
             Schildern Sie uns Ihr Anliegen
           </h1>
@@ -32,13 +32,13 @@ export default function KontaktPage() {
                 <div className="mt-2 space-y-1">
                   <a
                     href={site.phoneHref}
-                    className="block font-mono text-2xl font-medium text-brand transition-colors duration-200 hover:text-brand-deep"
+                    className="block tabular-nums text-2xl font-medium text-brand transition-colors duration-200 hover:text-brand-deep"
                   >
                     {site.phone}
                   </a>
                   <a
                     href={site.phone2Href}
-                    className="block font-mono text-lg text-ink-soft transition-colors duration-200 hover:text-brand"
+                    className="block tabular-nums text-lg text-ink-soft transition-colors duration-200 hover:text-brand"
                   >
                     {site.phone2}
                   </a>
@@ -113,7 +113,7 @@ export default function KontaktPage() {
             rel="noopener noreferrer"
             className="text-[14px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
           >
-            Route in Google Maps öffnen →
+            Route in Google Maps öffnen
           </a>
         </div>
       </section>

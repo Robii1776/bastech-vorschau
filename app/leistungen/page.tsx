@@ -88,7 +88,7 @@ export default function LeistungenPage() {
     <>
       <section className="mx-auto max-w-[1320px] px-5 pb-16 pt-10 sm:px-8 md:pt-16">
         <Reveal>
-          <p className="font-mono text-[13px] font-medium text-brand">Leistungen</p>
+          <p className="tabular-nums text-[13px] font-medium text-brand">Leistungen</p>
           <h1 className="mt-4 max-w-[22ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
             Technische Dienstleistung für die grafische Industrie
           </h1>
@@ -142,7 +142,7 @@ export default function LeistungenPage() {
                   href={`/kontakt/?betreff=${encodeURIComponent(s.title)}`}
                   className="mt-8 inline-block text-[15px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
                 >
-                  {s.title} anfragen →
+                  {s.title} anfragen
                 </Link>
               </Reveal>
 
@@ -173,7 +173,7 @@ export default function LeistungenPage() {
           </p>
           <a
             href={site.phoneHref}
-            className="pressable mt-7 inline-block rounded-md bg-brand px-7 py-4 font-mono text-[16px] font-medium text-on-brand transition-colors duration-200 hover:bg-brand-deep"
+            className="pressable mt-7 inline-block rounded-md bg-brand px-7 py-4 tabular-nums text-[16px] font-medium text-on-brand transition-colors duration-200 hover:bg-brand-deep"
           >
             {site.phone}
           </a>
