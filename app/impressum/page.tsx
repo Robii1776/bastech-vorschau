@@ -43,6 +43,8 @@ export default function ImpressumPage() {
             UID: {site.uid}
             <br />
             Rechtsform: Aktiengesellschaft
+            <br />
+            Vertretungsberechtigt: André Basler, Inhaber
           </p>
         </div>
 

@@ -35,15 +35,15 @@ export function CtaBand() {
           <figure className="max-w-[280px]">
             <div className="img-frame relative aspect-[4/5] w-64 rounded-lg">
               <Image
-                src="/images/inhaber.jpeg"
-                alt="Danilo Falzarano, Inhaber der Bastech Betriebe AG"
+                src="/images/team-inhaber.jpeg"
+                alt="André Basler, Inhaber der Bastech Betriebe AG"
                 fill
                 sizes="256px"
                 className="rounded-lg object-cover"
               />
             </div>
             <figcaption className="mt-3 text-[14px] text-on-brand/70">
-              <span className="font-semibold text-on-brand">Danilo Falzarano</span>, Inhaber.
+              <span className="font-semibold text-on-brand">André Basler</span>, Inhaber.
               Ihr direkter Draht: kein Callcenter, keine Warteschlaufe.
             </figcaption>
           </figure>

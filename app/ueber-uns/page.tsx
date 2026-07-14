@@ -35,10 +35,10 @@ export default function UeberUnsPage() {
                 die aktuellen.
               </p>
               <p>
-                Wir bleiben bewusst klein und direkt. Wer bei uns anruft, hat Inhaber Danilo
-                Falzarano am Apparat, also die Person, die nachher auch an der Maschine steht,
-                nicht eine Disposition. Das macht uns schnell, und es macht unsere Aussagen
-                verbindlich.
+                Wir bleiben bewusst klein und direkt. Wer bei uns anruft, spricht mit Inhaber
+                André Basler oder mit Danilo Falzarano, also mit den Leuten, die nachher auch an
+                der Maschine stehen, nicht mit einer Disposition. Das macht uns schnell, und es
+                macht unsere Aussagen verbindlich.
               </p>
             </div>
 
@@ -57,24 +57,30 @@ export default function UeberUnsPage() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <figure>
-              <div className="img-frame relative aspect-[3/4] rounded-lg">
-                <Image
-                  src="/images/inhaber.jpeg"
-                  alt="Danilo Falzarano, Inhaber der Bastech Betriebe AG"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 90vw, 480px"
-                  className="rounded-lg object-cover"
-                />
-              </div>
-              <figcaption className="mt-3 text-[15px]">
-                <span className="font-semibold">Danilo Falzarano</span>
-                <span className="block text-[13px] text-ink-soft">
-                  Inhaber und Ihr direkter Ansprechpartner
-                </span>
-              </figcaption>
-            </figure>
+            <div className="grid grid-cols-2 gap-5">
+              {/* TODO Übergabe: Namen/Rollen von Danilo bestätigen lassen */}
+              {[
+                ["/images/team-inhaber.jpeg", "André Basler", "Inhaber"],
+                ["/images/team-danilo.jpeg", "Danilo Falzarano", "Service & Technik"],
+              ].map(([src, name, role]) => (
+                <figure key={name}>
+                  <div className="img-frame relative aspect-[3/4] rounded-lg">
+                    <Image
+                      src={src}
+                      alt={`${name}, ${role}, Bastech Betriebe AG`}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 45vw, 260px"
+                      className="rounded-lg object-cover"
+                    />
+                  </div>
+                  <figcaption className="mt-3 text-[15px]">
+                    <span className="font-semibold">{name}</span>
+                    <span className="block text-[13px] text-ink-soft">{role}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>

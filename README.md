@@ -36,10 +36,11 @@ Der Inhalt von `./out` kann direkt auf jeden Webspace hochgeladen werden.
 - [ ] **Adresse bestätigen**: Website sagt „Kreuzmatte 1a, 6260 Mehlsecken“,
       Handelsregister „Beim Kreuz 21, 6262 Langnau b. Reiden“ (Mutation 02/2026).
       Korrekte Adresse in `lib/site.ts` eintragen.
-- [ ] **Inhaber-Angaben bestätigen**: Danilo Falzarano ist als Inhaber eingebaut
-      (Über uns, CTA-Karte). Handelsregister nennt (Stand vor Mutation 02/2026)
-      André Basler; Rollen und Schreibweise mit dem Kunden verifizieren,
-      danach auch im Impressum als verantwortliche Person eintragen.
+- [ ] **Team-Angaben bestätigen**: Eingebaut sind André Basler (Inhaber, per
+      Handelsregister/Moneyhouse: Mitglied mit Einzelunterschrift) und
+      Danilo Falzarano (Rolle aktuell „Service & Technik“, Annahme!).
+      Schreibweise und Funktionen von beiden bestätigen lassen
+      (Über uns, CTA-Karte, Impressum).
 - [ ] **Checkliste des Kunden einarbeiten**: Erreichbarkeitszeiten (Kontakt),
       evtl. Teamfotos und weitere Mitarbeitende.
 - [ ] **Claims prüfen**: „Rückmeldung unter 24 h“ ist als Versprechen eingebaut,
