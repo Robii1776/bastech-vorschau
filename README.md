@@ -14,6 +14,17 @@ npm run build   # Statischer Export nach ./out
 
 Der Inhalt von `./out` kann direkt auf jeden Webspace hochgeladen werden.
 
+## Vorschau online (für Roberto & Danilo)
+
+**https://robii1776.github.io/bastech-website/**
+
+Aktualisieren nach Änderungen: `npm run deploy` (baut und pusht auf den
+`gh-pages`-Branch, nach 1–2 Minuten ist die Vorschau aktuell).
+Quellcode: https://github.com/Robii1776/bastech-website
+
+Beim Livegang auf `bastechbetriebeag.ch`: normal `npm run build` (ohne
+Base-Path) und `out/` hochladen, oder Repo an Vercel/Netlify hängen.
+
 ## Struktur
 
 | Pfad | Inhalt |
