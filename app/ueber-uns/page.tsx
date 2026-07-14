@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Über uns: Maschinenbau-Handwerk aus dem Kanton Luzern",
@@ -66,7 +67,7 @@ export default function UeberUnsPage() {
                 <figure key={name}>
                   <div className="img-frame relative aspect-[3/4] rounded-lg">
                     <Image
-                      src={src}
+                      src={asset(src)}
                       alt={`${name}, ${role}, Bastech Betriebe AG`}
                       fill
                       priority
@@ -135,7 +136,7 @@ export default function UeberUnsPage() {
           <Reveal delay={0.1}>
             <div className="img-frame relative aspect-[4/3] rounded-lg">
               <Image
-                src="/images/maschine-6.jpeg"
+                src={asset("/images/maschine-6.jpeg")}
                 alt="Tanner US-2000 L Banderoliermaschine aus dem Bastech-Bestand"
                 fill
                 sizes="(max-width: 1024px) 90vw, 620px"

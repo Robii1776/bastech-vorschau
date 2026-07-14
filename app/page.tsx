@@ -10,6 +10,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { machines } from "@/lib/machines";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 const services = [
   {
@@ -121,7 +122,7 @@ export default function HomePage() {
               <ImageReveal className="img-frame duotone relative aspect-[3/4] max-h-[540px] w-full rounded-lg">
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/hero-1.jpg"
+                    src={asset("/images/hero-1.jpg")}
                     alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
                     fill
                     priority
@@ -212,7 +213,7 @@ export default function HomePage() {
           <ImageReveal className="order-2 lg:order-1 img-frame relative aspect-[4/5] max-h-[520px] rounded-lg">
             <div className="relative h-full w-full">
               <Image
-                src="/images/maschine-2.jpeg"
+                src={asset("/images/maschine-2.jpeg")}
                 alt="Revidierter Anleger mit Bastech Betriebe AG Typenschild"
                 fill
                 sizes="(max-width: 1024px) 90vw, 520px"

@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 /* eslint-disable @next/next/no-img-element */
 
 const brands: { name: string; src: string; h?: number }[] = [
@@ -29,7 +30,7 @@ export function BrandMarquee() {
             {[...brands, ...brands].map((brand, i) => (
               <img
                 key={`${brand.name}-${i}`}
-                src={brand.src}
+                src={asset(brand.src)}
                 alt={brand.name}
                 style={{ height: brand.h ?? 24 }}
                 loading="lazy"

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
+import { asset } from "@/lib/asset";
 
 export function CtaBand() {
   return (
@@ -35,7 +36,7 @@ export function CtaBand() {
           <figure className="max-w-[280px]">
             <div className="img-frame relative aspect-[4/5] w-64 rounded-lg">
               <Image
-                src="/images/team-inhaber.jpeg"
+                src={asset("/images/team-inhaber.jpeg")}
                 alt="André Basler, Inhaber der Bastech Betriebe AG"
                 fill
                 sizes="256px"

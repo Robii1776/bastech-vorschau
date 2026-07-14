@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { nav, site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,7 +41,7 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between gap-6 px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="Bastech Betriebe AG, Startseite">
           <Image
-            src="/images/logo.jpeg"
+            src={asset("/images/logo.jpeg")}
             alt=""
             width={44}
             height={44}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Leistungen: Service, Revisionen, Reparaturen und Ersatzteile",
@@ -149,7 +150,7 @@ export default function LeistungenPage() {
               <Reveal delay={0.1}>
                 <div className="img-frame relative aspect-[4/3] rounded-lg">
                   <Image
-                    src={s.image}
+                    src={asset(s.image)}
                     alt={s.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 90vw, 620px"

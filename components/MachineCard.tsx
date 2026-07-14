@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Machine } from "@/lib/machines";
 import { ArrowRightIcon } from "@/components/Icons";
+import { asset } from "@/lib/asset";
 
 export function MachineCard({ machine }: { machine: Machine }) {
   return (
@@ -9,7 +10,7 @@ export function MachineCard({ machine }: { machine: Machine }) {
       <div className="img-frame relative aspect-[4/3]">
         {machine.image ? (
           <Image
-            src={machine.image}
+            src={asset(machine.image)}
             alt={`${machine.name}, ${machine.category}`}
             fill
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 320px"
