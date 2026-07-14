@@ -74,79 +74,71 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
-      <section className="mx-auto max-w-[1320px] px-5 pb-20 pt-10 sm:px-8 md:pb-28 md:pt-16">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
-          <Reveal>
-            <p className="text-[15px] font-medium text-ink-soft">
-              Maschinenservice aus Mehlsecken LU, schweizweit im Einsatz
-            </p>
-            <h1 className="mt-4 max-w-[16ch] text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl">
-              Ihre Maschinen sollen laufen. Dafür sorgen wir.
-            </h1>
-            <p className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-ink-soft">
-              Service, Revisionen und Reparaturen für Druckweiterverarbeitung, Buchbinderei und
-              Umreifungstechnik, dazu geprüfte Occasionsmaschinen und Ersatzteile. Direkt,
-              flexibel, seit {site.founded}.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link
-                href="/kontakt/"
-                className="pressable rounded-md bg-brand px-7 py-4 text-[16px] font-semibold text-on-brand transition-colors duration-200 hover:bg-brand-deep"
-              >
-                Service anfragen
-              </Link>
-              <a
-                href={site.phoneHref}
-                className="pressable rounded-md border border-line bg-white px-7 py-4 font-mono text-[16px] font-medium transition-colors duration-200 hover:border-brand hover:text-brand"
-              >
-                {site.phone}
-              </a>
-            </div>
-            <dl className="mt-12 flex max-w-md flex-wrap gap-x-12 gap-y-5">
-              {[
-                ["Seit", site.founded],
-                ["Einsatzgebiet", "Schweiz"],
-                ["Rückmeldung", "unter 24 h"],
-              ].map(([label, value]) => (
-                <div key={label}>
-                  <dt className="text-[13px] font-medium text-ink-soft">{label}</dt>
-                  <dd className="mt-0.5 font-mono text-[17px] font-medium">{value}</dd>
-                </div>
-              ))}
-            </dl>
-            <Link
-              href="/maschinen/"
-              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-brand-tint px-4 py-2 text-[14px] font-semibold text-brand-deep transition-colors duration-200 hover:bg-brand hover:text-on-brand"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute h-full w-full animate-ping rounded-full bg-brand opacity-60 group-hover:bg-on-brand" />
-                <span className="relative h-2 w-2 rounded-full bg-brand group-hover:bg-on-brand" />
-              </span>
-              {machines.length} Occasionsmaschinen aktuell verfügbar
-            </Link>
-          </Reveal>
-
-          <Reveal delay={0.15} y={0} className="relative">
-            <ImageReveal className="img-frame relative aspect-[3/4] max-h-[560px] w-full rounded-lg">
-              <div className="relative h-full w-full">
-                <Image
-                  src="/images/hero-1.jpg"
-                  alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 90vw, 560px"
-                  className="rounded-lg object-cover"
-                />
+      <section className="bg-brand-deep text-on-brand">
+        <div className="mx-auto max-w-[1320px] px-5 pt-14 sm:px-8 md:pt-20">
+          <div className="grid items-center gap-12 pb-16 md:pb-20 lg:grid-cols-[1.2fr_1fr]">
+            <Reveal>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-on-brand/60">
+                Maschinenservice für die grafische Industrie · seit {site.founded}
+              </p>
+              <h1 className="mt-5 max-w-[14ch] text-5xl sm:text-6xl lg:text-7xl">
+                Maschine steht? <span className="text-brand-soft">Wir bringen sie zum Laufen.</span>
+              </h1>
+              <p className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-on-brand/75">
+                Reparaturen, Revisionen und Ersatzteile für Druckweiterverarbeitung, Buchbinderei
+                und Umreifungstechnik. Wer anruft, spricht direkt mit dem Techniker, schweizweit
+                im Einsatz von Mehlsecken LU aus.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-4">
+                <a
+                  href={site.phoneHref}
+                  className="pressable rounded-md bg-white px-7 py-4 font-mono text-[17px] font-medium text-brand-deep transition-opacity duration-200 hover:opacity-90"
+                >
+                  {site.phone}
+                </a>
+                <Link
+                  href="/kontakt/"
+                  className="pressable rounded-md border border-on-brand/30 px-7 py-4 text-[16px] font-semibold transition-colors duration-200 hover:border-on-brand/70"
+                >
+                  Service anfragen
+                </Link>
               </div>
-            </ImageReveal>
-            <p className="mt-3 font-mono text-[12px] text-ink-soft">
-              Tanner US-2000, revidiert und einsatzbereit
-            </p>
-          </Reveal>
-        </div>
-      </section>
+              <p className="mt-6 font-mono text-[13px] text-on-brand/60">
+                Rückmeldung unter 24 h · Werkstatt und Vor-Ort-Einsätze
+              </p>
+              <Link
+                href="/maschinen/"
+                className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2 text-[14px] font-semibold text-on-brand transition-colors duration-200 hover:bg-white hover:text-brand-deep"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute h-full w-full animate-ping rounded-full bg-brand-soft opacity-70" />
+                  <span className="relative h-2 w-2 rounded-full bg-brand-soft" />
+                </span>
+                {machines.length} Occasionsmaschinen aktuell verfügbar
+              </Link>
+            </Reveal>
 
-      <BrandMarquee />
+            <Reveal delay={0.15} y={0} className="relative">
+              <ImageReveal className="img-frame relative aspect-[3/4] max-h-[540px] w-full rounded-lg">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/images/hero-1.jpg"
+                    alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 90vw, 540px"
+                    className="rounded-lg object-cover"
+                  />
+                </div>
+              </ImageReveal>
+              <p className="mt-3 font-mono text-[12px] text-on-brand/60">
+                Tanner US-2000, revidiert und einsatzbereit
+              </p>
+            </Reveal>
+          </div>
+        </div>
+        <BrandMarquee dark />
+      </section>
 
       {/* Leistungen */}
       <section className="border-y border-line bg-surface">

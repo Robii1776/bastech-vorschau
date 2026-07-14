@@ -12,11 +12,16 @@
   --color-brand-tint: oklch(93.5% 0.018 250);
   --color-on-brand: oklch(98% 0.005 250);
 
-  /* Barlow: Grotesk nach Vorbild von Industrie- und Verkehrsbeschilderung.
-     Überschriften in Barlow Semi Condensed (Typenschild-Charakter). */
+  /* Typografie-Konzept "Werkstatt-Plakat":
+     Anton (kondensierte Plakatschrift, Versalien) für grosse Titel,
+     Barlow Semi Condensed für Zwischentitel (Typenschild-Charakter),
+     Barlow für Text, IBM Plex Mono für Preise, Nummern, Technik-Daten. */
   --font-sans: var(--font-barlow), system-ui, sans-serif;
+  --font-poster: var(--font-anton), var(--font-barlow), system-ui, sans-serif;
   --font-display: var(--font-barlow-display), var(--font-barlow), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --color-brand-soft: oklch(80% 0.05 250);
 
   /* "bold" global auf 600: präzise statt marktschreierisch */
   --font-weight-bold: 600;
@@ -44,7 +49,15 @@ body {
 }
 
 h1,
-h2,
+h2 {
+  font-family: var(--font-poster);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.012em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
 h3 {
   font-family: var(--font-display);
   text-wrap: balance;

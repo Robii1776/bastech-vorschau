@@ -33,10 +33,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
-        scrolled || open
-          ? "border-b border-line bg-bg/90 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-bg/95 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled && !open ? "border-line shadow-[0_1px_8px_rgba(15,30,50,0.06)]" : "border-line"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between gap-6 px-5 sm:px-8">

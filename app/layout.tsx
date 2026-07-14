@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Barlow, Barlow_Semi_Condensed, IBM_Plex_Mono } from "next/font/google";
+import { Anton, Barlow, Barlow_Semi_Condensed, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileActionBar } from "@/components/MobileActionBar";
 import { site } from "@/lib/site";
 import "./globals.css";
+
+const anton = Anton({
+  subsets: ["latin"],
+  variable: "--font-anton",
+  display: "swap",
+  weight: "400",
+});
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -93,7 +100,10 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de-CH" className={`${barlow.variable} ${barlowDisplay.variable} ${plexMono.variable}`}>
+    <html
+      lang="de-CH"
+      className={`${anton.variable} ${barlow.variable} ${barlowDisplay.variable} ${plexMono.variable}`}
+    >
       <body>
         <script
           type="application/ld+json"
