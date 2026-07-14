@@ -40,6 +40,7 @@ function ContactFormInner() {
           email: data.get("email"),
           telefon: data.get("telefon"),
           anliegen: data.get("anliegen"),
+          dringlichkeit: data.get("dringlichkeit"),
           maschine: data.get("maschine"),
           nachricht: data.get("nachricht"),
         }),
@@ -109,21 +110,33 @@ function ContactFormInner() {
         </div>
       </div>
 
-      <div className="space-y-2">
-        <label htmlFor="anliegen" className="block text-[14px] font-semibold">
-          Anliegen *
-        </label>
-        <select id="anliegen" name="anliegen" required defaultValue={betreff ? "Occasionsmaschine" : ""} className={inputClass}>
-          <option value="" disabled>
-            Bitte wählen …
-          </option>
-          <option>Service / Reparatur</option>
-          <option>Revision / Wartung</option>
-          <option>Ersatzteile</option>
-          <option>Occasionsmaschine</option>
-          <option>Neuentwicklung / Sonderlösung</option>
-          <option>Sonstiges</option>
-        </select>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div className="space-y-2">
+          <label htmlFor="anliegen" className="block text-[14px] font-semibold">
+            Anliegen *
+          </label>
+          <select id="anliegen" name="anliegen" required defaultValue={betreff ? "Occasionsmaschine" : ""} className={inputClass}>
+            <option value="" disabled>
+              Bitte wählen …
+            </option>
+            <option>Service / Reparatur</option>
+            <option>Revision / Wartung</option>
+            <option>Ersatzteile</option>
+            <option>Occasionsmaschine</option>
+            <option>Neuentwicklung / Sonderlösung</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="dringlichkeit" className="block text-[14px] font-semibold">
+            Dringlichkeit
+          </label>
+          <select id="dringlichkeit" name="dringlichkeit" defaultValue="Planbar" className={inputClass}>
+            <option>Notfall, Maschine steht</option>
+            <option>Diese Woche</option>
+            <option>Planbar</option>
+          </select>
+        </div>
       </div>
 
       {betreff && (

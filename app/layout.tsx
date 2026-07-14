@@ -3,6 +3,7 @@ import { Archivo } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileActionBar } from "@/components/MobileActionBar";
+import { Assistant } from "@/components/Assistant";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="pt-20">{children}</main>
         <Footer />
         <MobileActionBar />
+        <Assistant />
       </body>
     </html>
   );

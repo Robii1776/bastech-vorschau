@@ -57,6 +57,16 @@ Der Inhalt von `./out` kann direkt auf jeden Webspace hochgeladen werden.
 - [ ] Neue Logins für den Kunden erstellen (Hosting, Web3Forms, Search Console)
       und Zugangsdaten sauber übergeben.
 
+## Service-Assistent (Webbot)
+
+`components/Assistant.tsx` ist ein geführter, regelbasierter Assistent (bewusst
+ohne KI-Backend, damit die Seite statisch und kostenlos bleibt): Er erkennt
+Anliegen per Stichwort (Stillstand, Ersatzteil, Wartung, Occasion, Verkauf),
+stellt Rückfragen und führt zu Anruf, vorbefülltem WhatsApp-Text oder
+vorbefülltem Formular. Antworten lassen sich in `botReply()` pflegen.
+Upgrade-Option: echtes LLM via API-Route (z.B. Claude) — braucht dann Hosting
+mit Serverfunktion und API-Key, ca. Fr. 5–20/Monat je nach Nutzung.
+
 ## SEO / GEO
 
 - Individuelle Title/Description pro Seite, OpenGraph, `de_CH`
