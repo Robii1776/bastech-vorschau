@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "NEXT_PUBLIC_BASE_PATH=/bastech-website next build && touch out/.nojekyll && gh-pages -d out -t -m 'Deploy Vorschau'"
+    "deploy": "NEXT_PUBLIC_BASE_PATH=/bastech-vorschau next build && touch out/.nojekyll && gh-pages -d out -t -m 'Deploy Vorschau'"
   },
   "dependencies": {
     "motion": "^12.42.2",
