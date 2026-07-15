@@ -9,8 +9,8 @@ export function Footer() {
           <div>
             <p className="text-xl font-bold">{site.name}</p>
             <p className="mt-2 max-w-[42ch] text-[15px] leading-relaxed text-on-brand/70">
-              {site.claim}. Service, Revisionen, Reparaturen und Occasionsmaschinen für die grafische
-              Industrie. Von {site.address.city} aus schweizweit im Einsatz.
+              {site.claim}. Service, Revisionen, Reparaturen und Occasionsmaschinen für die
+              Schweizer Industrie. Von {site.address.city} aus schweizweit im Einsatz.
             </p>
             <p className="mt-6 tabular-nums text-[13px] text-on-brand/60">UID {site.uid} · AG seit {site.founded}</p>
           </div>
@@ -39,8 +39,11 @@ export function Footer() {
               </li>
               {site.contacts.map((c) => (
                 <li key={c.short}>
-                  <a href={c.href} className="transition-colors duration-200 hover:text-on-brand">
-                    {c.short} <span className="tabular-nums">{c.phone}</span>
+                  <a href={c.href} className="group block transition-colors duration-200 hover:text-on-brand">
+                    <span className="block text-[13px] text-on-brand/60">
+                      {c.name}, {c.role}
+                    </span>
+                    <span className="tabular-nums font-semibold">{c.phone}</span>
                   </a>
                 </li>
               ))}

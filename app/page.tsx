@@ -114,9 +114,27 @@ export default function HomePage() {
                   Service anfragen
                 </Link>
               </div>
-              <p className="mt-6 text-[14px] font-medium text-on-brand/60">
-                Rückmeldung unter 24 Stunden. Werkstatt in Mehlsecken, Einsätze in der ganzen Schweiz.
-              </p>
+              <div className="mt-7 flex items-center gap-3">
+                <div className="flex -space-x-2.5">
+                  {[
+                    ["/images/team-inhaber.jpeg", "André Basler"],
+                    ["/images/team-danilo.jpeg", "Danilo Falzarano"],
+                  ].map(([src, name]) => (
+                    <Image
+                      key={name}
+                      src={asset(src)}
+                      alt={name}
+                      width={44}
+                      height={44}
+                      className="h-11 w-11 rounded-full border-2 border-brand-deep object-cover"
+                    />
+                  ))}
+                </div>
+                <p className="max-w-[36ch] text-[14px] font-medium leading-snug text-on-brand/70">
+                  Sie sprechen direkt mit André und Danilo. Rückmeldung unter 24 Stunden,
+                  schweizweit im Einsatz.
+                </p>
+              </div>
               <Link
                 href="/maschinen/"
                 className="group mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-brand-soft transition-colors duration-200 hover:text-on-brand"
@@ -126,12 +144,12 @@ export default function HomePage() {
               </Link>
             </Reveal>
 
-            <Reveal delay={0.15} y={0} className="relative z-10 lg:-mb-24">
+            <Reveal delay={0.15} y={0} className="relative z-10 mb-10 lg:-mb-24 lg:mb-0">
               <ImageReveal className="img-frame duotone relative aspect-[3/4] w-full rounded-lg shadow-[0_32px_80px_-32px_rgba(5,15,35,0.8)]">
                 <div className="relative h-full w-full">
                   <Image
-                    src={asset("/images/hero-1.jpg")}
-                    alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
+                    src={asset("/images/maschine-3.jpeg")}
+                    alt="Tanner US-2000 AD Banderoliermaschine, komplett revidiert in der Bastech-Werkstatt"
                     fill
                     priority
                     sizes="(max-width: 1024px) 90vw, 560px"
@@ -139,9 +157,22 @@ export default function HomePage() {
                   />
                 </div>
               </ImageReveal>
-              <div className="absolute bottom-4 left-4 rounded-md bg-white/95 px-4 py-3 shadow-[0_8px_24px_-12px_rgba(5,15,35,0.5)] backdrop-blur">
-                <p className="text-[13px] font-bold text-ink">Tanner US-2000</p>
-                <p className="text-[12px] text-ink-soft">Revidiert und einsatzbereit, ab Lager Mehlsecken</p>
+              <div className="absolute -bottom-8 left-5 w-[46%] overflow-hidden rounded-md shadow-[0_20px_48px_-16px_rgba(5,15,35,0.7)]">
+                <Image
+                  src={asset("/images/maschine-8.jpeg")}
+                  alt="Strapex SMG 10 Umreifungsautomat, hochwertig überarbeitet"
+                  width={480}
+                  height={600}
+                  priority
+                  className="block aspect-[4/5] w-full object-cover"
+                />
+                <p className="bg-white px-3 py-2 text-[12px] font-semibold text-ink">
+                  Geprüfte Occasionen ab Lager
+                </p>
+              </div>
+              <div className="absolute right-4 top-4 rounded-md bg-white/95 px-4 py-3 shadow-[0_8px_24px_-12px_rgba(5,15,35,0.5)] backdrop-blur">
+                <p className="text-[13px] font-bold text-ink">Revision · Handel · Ersatzteile</p>
+                <p className="text-[12px] text-ink-soft">Direkt aus der Werkstatt Mehlsecken LU</p>
               </div>
             </Reveal>
           </div>
