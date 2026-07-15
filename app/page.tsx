@@ -144,7 +144,7 @@ export default function HomePage() {
               </Link>
             </Reveal>
 
-            <Reveal delay={0.15} y={0} className="relative z-10 mb-10 lg:-mb-24 lg:mb-0">
+            <Reveal delay={0.15} y={0} className="relative z-10 lg:-mb-24">
               <ImageReveal className="img-frame duotone relative aspect-[3/4] w-full rounded-lg shadow-[0_32px_80px_-32px_rgba(5,15,35,0.8)]">
                 <div className="relative h-full w-full">
                   <Image
@@ -157,22 +157,18 @@ export default function HomePage() {
                   />
                 </div>
               </ImageReveal>
-              <div className="absolute -bottom-8 left-5 w-[46%] overflow-hidden rounded-md shadow-[0_20px_48px_-16px_rgba(5,15,35,0.7)]">
-                <Image
-                  src={asset("/images/maschine-8.jpeg")}
-                  alt="Strapex SMG 10 Umreifungsautomat, hochwertig überarbeitet"
-                  width={480}
-                  height={600}
-                  priority
-                  className="block aspect-[4/5] w-full object-cover"
-                />
-                <p className="bg-white px-3 py-2 text-[12px] font-semibold text-ink">
-                  Geprüfte Occasionen ab Lager
-                </p>
-              </div>
-              <div className="absolute right-4 top-4 rounded-md bg-white/95 px-4 py-3 shadow-[0_8px_24px_-12px_rgba(5,15,35,0.5)] backdrop-blur">
-                <p className="text-[13px] font-bold text-ink">Revision · Handel · Ersatzteile</p>
-                <p className="text-[12px] text-ink-soft">Direkt aus der Werkstatt Mehlsecken LU</p>
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4 rounded-md bg-white/95 px-4 py-3 shadow-[0_8px_24px_-12px_rgba(5,15,35,0.5)] backdrop-blur">
+                <div>
+                  <p className="text-[13px] font-bold text-ink">Revision · Handel · Ersatzteile</p>
+                  <p className="text-[12px] text-ink-soft">Direkt aus der Werkstatt Mehlsecken LU</p>
+                </div>
+                <Link
+                  href="/maschinen/"
+                  className="group/hero inline-flex shrink-0 items-center gap-1.5 text-[13px] font-semibold text-brand transition-colors duration-200 hover:text-brand-deep"
+                >
+                  Occasionen
+                  <ArrowRightIcon size={14} className="transition-transform duration-200 group-hover/hero:translate-x-0.5" />
+                </Link>
               </div>
             </Reveal>
           </div>
