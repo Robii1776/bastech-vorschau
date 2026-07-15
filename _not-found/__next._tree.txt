@@ -1,2 +1,2 @@
-:HL["/bastech-vorschau/_next/static/chunks/2m61a6fn_05nb.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"ICjFOF80lUOeLerF0Yo9e"}
+:HL["/bastech-vorschau/_next/static/chunks/391m4jci-yrew.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"vwy3Http-Upkmavv_1bAx"}
