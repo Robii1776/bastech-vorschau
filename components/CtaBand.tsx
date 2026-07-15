@@ -37,21 +37,33 @@ export function CtaBand() {
         </Reveal>
 
         <Reveal delay={0.1} className="justify-self-center md:justify-self-end">
-          <figure className="max-w-[280px]">
-            <div className="img-frame relative aspect-[4/5] w-64 rounded-lg">
-              <Image
-                src={asset("/images/team-inhaber.jpeg")}
-                alt="André Basler, Inhaber der Bastech Betriebe AG"
-                fill
-                sizes="256px"
-                className="rounded-lg object-cover"
-              />
+          <div className="max-w-[400px]">
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                ["/images/team-inhaber.jpeg", "André Basler", "Inhaber"],
+                ["/images/team-danilo.jpeg", "Danilo Falzarano", "Service & Technik"],
+              ].map(([src, name, role]) => (
+                <figure key={name}>
+                  <div className="img-frame relative aspect-[4/5] rounded-lg">
+                    <Image
+                      src={asset(src)}
+                      alt={`${name}, ${role}, Bastech Betriebe AG`}
+                      fill
+                      sizes="200px"
+                      className="rounded-lg object-cover"
+                    />
+                  </div>
+                  <figcaption className="mt-2.5 text-[14px] leading-snug">
+                    <span className="block font-semibold text-on-brand">{name}</span>
+                    <span className="text-[13px] text-on-brand/60">{role}</span>
+                  </figcaption>
+                </figure>
+              ))}
             </div>
-            <figcaption className="mt-3 text-[14px] text-on-brand/70">
-              <span className="font-semibold text-on-brand">André Basler</span>, Inhaber.
+            <p className="mt-4 text-[14px] text-on-brand/70">
               Ihr direkter Draht: kein Callcenter, keine Warteschlaufe.
-            </figcaption>
-          </figure>
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>
