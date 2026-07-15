@@ -4,7 +4,7 @@ import { Reveal, StaggerList } from "@/components/Reveal";
 import { ImageReveal } from "@/components/ImageReveal";
 import { BrandMarquee } from "@/components/BrandMarquee";
 import { KineticBand } from "@/components/KineticBand";
-import { ArrowRightIcon } from "@/components/Icons";
+import { ArrowRightIcon, PhoneIcon } from "@/components/Icons";
 import { MachineCard } from "@/components/MachineCard";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq, type FaqItem } from "@/components/Faq";
@@ -20,12 +20,12 @@ const services = [
   },
   {
     title: "Mechanische Reparaturen",
-    text: "Schnelle Fehlerdiagnose und fachgerechte Instandsetzung an Falz-, Banderolier- und Umreifungsmaschinen, vor Ort oder in unserer Werkstatt.",
+    text: "Schnelle Fehlerdiagnose und fachgerechte Instandsetzung an Produktions- und Verpackungsanlagen, von der Falzmaschine bis zum Umreifungsautomaten, vor Ort oder in unserer Werkstatt.",
     href: "/leistungen/#reparaturen",
   },
   {
     title: "Ersatzteile",
-    text: "Kurzfristig lieferbare Ersatz- und Verschleissteile, auch für ältere Maschinengenerationen von Müller Martini, MBO, Tanner und weiteren.",
+    text: "Kurzfristig lieferbare Ersatz- und Verschleissteile: Motoren, Pumpen, Steuerungen und mehr, auch für ältere Maschinengenerationen praktisch aller Hersteller.",
     href: "/leistungen/#ersatzteile",
   },
   {
@@ -47,7 +47,7 @@ const faqItems: FaqItem[] = [
   },
   {
     q: "Welche Maschinen und Hersteller betreut Bastech?",
-    a: "Wir sind spezialisiert auf Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik: Falzmaschinen, Banderolier- und Umreifungsmaschinen, Anleger und Zusatzaggregate, unter anderem von Müller Martini, MBO, Tanner, Strapex und Mosca.",
+    a: "Unsere Wurzeln liegen in der Druckweiterverarbeitung und Buchbinderei, heute betreuen wir Produktions-, Verpackungs- und Förderanlagen in der ganzen Industrie: Falz-, Banderolier- und Umreifungsmaschinen, Anleger, Antriebe und Zusatzaggregate, unter anderem von Müller Martini, MBO, Tanner, Strapex und Mosca.",
   },
   {
     q: "Verkauft Bastech auch geprüfte Occasionsmaschinen?",
@@ -82,26 +82,34 @@ export default function HomePage() {
           <div className="grid items-center gap-12 pb-16 md:pb-20 lg:grid-cols-[1.2fr_1fr]">
             <Reveal>
               <p className="text-[15px] font-semibold text-on-brand/65">
-                Maschinenservice für die grafische Industrie, seit {site.founded}
+                Maschinenservice und Handel für die Schweizer Industrie, seit {site.founded}
               </p>
               <h1 className="mt-5 max-w-[14ch] text-5xl sm:text-6xl lg:text-7xl">
                 Maschine steht? <span className="text-brand-soft">Wir bringen sie zum Laufen.</span>
               </h1>
               <p className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-on-brand/75">
-                Reparaturen, Revisionen und Ersatzteile für Druckweiterverarbeitung, Buchbinderei
-                und Umreifungstechnik. Wer anruft, spricht direkt mit dem Techniker, schweizweit
-                im Einsatz von Mehlsecken LU aus.
+                Reparaturen, Revisionen, Ersatzteile und geprüfte Occasionsmaschinen für
+                Produktions-, Verpackungs- und Förderanlagen. Tief verwurzelt in der grafischen
+                Industrie, im Einsatz für die ganze Schweizer Industrie. Wer anruft, spricht
+                direkt mit dem Techniker.
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
-                <a
-                  href={site.phoneHref}
-                  className="pressable tabular-nums rounded-md bg-white px-7 py-4 text-[17px] font-bold text-brand-deep transition-opacity duration-200 hover:opacity-90"
-                >
-                  {site.phone}
-                </a>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                {site.contacts.map((c) => (
+                  <a
+                    key={c.short}
+                    href={c.href}
+                    className="pressable flex items-center gap-3 rounded-md bg-white px-5 py-3.5 text-brand-deep transition-opacity duration-200 hover:opacity-90"
+                  >
+                    <PhoneIcon size={17} />
+                    <span className="leading-tight">
+                      <span className="block text-[12px] font-semibold text-brand">{c.short} · {c.role}</span>
+                      <span className="tabular-nums block text-[16px] font-bold">{c.phone}</span>
+                    </span>
+                  </a>
+                ))}
                 <Link
                   href="/kontakt/"
-                  className="pressable rounded-md border border-on-brand/30 px-7 py-4 text-[16px] font-semibold transition-colors duration-200 hover:border-on-brand/70"
+                  className="pressable rounded-md border border-on-brand/30 px-6 py-4 text-[16px] font-semibold transition-colors duration-200 hover:border-on-brand/70"
                 >
                   Service anfragen
                 </Link>
@@ -118,22 +126,23 @@ export default function HomePage() {
               </Link>
             </Reveal>
 
-            <Reveal delay={0.15} y={0} className="relative">
-              <ImageReveal className="img-frame duotone relative aspect-[3/4] max-h-[540px] w-full rounded-lg">
+            <Reveal delay={0.15} y={0} className="relative z-10 lg:-mb-24">
+              <ImageReveal className="img-frame duotone relative aspect-[3/4] w-full rounded-lg shadow-[0_32px_80px_-32px_rgba(5,15,35,0.8)]">
                 <div className="relative h-full w-full">
                   <Image
                     src={asset("/images/hero-1.jpg")}
                     alt="Tanner Ultra-Sonic 2000 Banderoliermaschine, revidiert durch Bastech Betriebe AG"
                     fill
                     priority
-                    sizes="(max-width: 1024px) 90vw, 540px"
+                    sizes="(max-width: 1024px) 90vw, 560px"
                     className="rounded-lg object-cover"
                   />
                 </div>
               </ImageReveal>
-              <p className="mt-3 text-[13px] text-on-brand/55">
-                Tanner US-2000, revidiert und einsatzbereit
-              </p>
+              <div className="absolute bottom-4 left-4 rounded-md bg-white/95 px-4 py-3 shadow-[0_8px_24px_-12px_rgba(5,15,35,0.5)] backdrop-blur">
+                <p className="text-[13px] font-bold text-ink">Tanner US-2000</p>
+                <p className="text-[12px] text-ink-soft">Revidiert und einsatzbereit, ab Lager Mehlsecken</p>
+              </div>
             </Reveal>
           </div>
         </div>
@@ -230,7 +239,7 @@ export default function HomePage() {
               {[
                 [
                   "Fachwissen, das man nicht googeln kann",
-                  "Jahrzehntelange Erfahrung in Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik, auch bei Maschinen, für die es offiziell keinen Support mehr gibt.",
+                  "Jahrzehntelange Erfahrung mit Produktions- und Verpackungsanlagen, besonders tief in Druckweiterverarbeitung und Umreifungstechnik, auch bei Maschinen ohne offiziellen Hersteller-Support.",
                 ],
                 [
                   "Einsatzbereitschaft & Flexibilität",

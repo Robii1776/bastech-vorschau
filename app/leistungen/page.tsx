@@ -9,7 +9,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "Leistungen: Service, Revisionen, Reparaturen und Ersatzteile",
   description:
-    "Maschinenservice für die grafische Industrie: Revisionen, mechanische Reparaturen, Ersatzteile, Handel mit Occasionsmaschinen und Neuentwicklungen. Bastech Betriebe AG, schweizweit.",
+    "Maschinenservice für die Schweizer Industrie: Revisionen, mechanische Reparaturen, Ersatzteile, Handel mit Occasionsmaschinen und Neuentwicklungen. Bastech Betriebe AG, schweizweit.",
 };
 
 const sections = [
@@ -31,7 +31,7 @@ const sections = [
     id: "reparaturen",
     title: "Mechanische Reparaturen",
     lead: "Schnelle Diagnose, fachgerechte Instandsetzung.",
-    text: "Wenn eine Maschine steht, zählt jede Stunde. Wir finden die Ursache statt nur das Symptom, ob mechanisch, pneumatisch oder steuerungsseitig, und setzen instand: vor Ort bei Ihnen oder in unserer Werkstatt.",
+    text: "Wenn eine Maschine steht, zählt jede Stunde. Wir finden die Ursache statt nur das Symptom, ob mechanisch, pneumatisch oder steuerungsseitig, und setzen instand: vor Ort bei Ihnen oder in unserer Werkstatt. Das gilt für Anlagen aus der ganzen Industrie, nicht nur aus der grafischen.",
     points: [
       "Fehlerdiagnose an Mechanik, Pneumatik und Steuerung",
       "Einsätze vor Ort in der ganzen Schweiz",
@@ -91,12 +91,13 @@ export default function LeistungenPage() {
         <Reveal>
           <p className="tabular-nums text-[13px] font-medium text-brand">Leistungen</p>
           <h1 className="mt-4 max-w-[22ch] text-4xl font-bold leading-[1.08] sm:text-5xl">
-            Technische Dienstleistung für die grafische Industrie
+            Technische Dienstleistung für die Industrie
           </h1>
           <p className="mt-6 max-w-[58ch] text-[17px] leading-relaxed text-ink-soft">
-            Von der vorbeugenden Wartung bis zur Sonderkonstruktion: Wir halten Ihre
-            Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik am Laufen, mit kurzen
-            Wegen und einem Ansprechpartner, der die Maschinen wirklich kennt.
+            Von der vorbeugenden Wartung bis zur Sonderkonstruktion: Wir halten Ihre Produktion
+            am Laufen, von der Druckweiterverarbeitung über Verpackungslinien bis zur
+            Fördertechnik. Mit kurzen Wegen und Ansprechpartnern, welche die Maschinen wirklich
+            kennen.
           </p>
         </Reveal>
 

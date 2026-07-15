@@ -16,13 +16,17 @@ export function CtaBand() {
             Schildern Sie uns kurz das Problem. Sie erhalten innert 24 Stunden eine Rückmeldung
             mit dem weiteren Vorgehen. Unkompliziert, ehrlich und ohne Callcenter.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href={site.phoneHref}
-              className="pressable rounded-md bg-on-brand px-6 py-3.5 tabular-nums text-[16px] font-medium text-brand-deep transition-opacity duration-200 hover:opacity-90"
-            >
-              {site.phone}
-            </a>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            {site.contacts.map((c) => (
+              <a
+                key={c.short}
+                href={c.href}
+                className="pressable rounded-md bg-on-brand px-5 py-3 text-brand-deep transition-opacity duration-200 hover:opacity-90"
+              >
+                <span className="block text-[12px] font-semibold text-brand">{c.short} · {c.role}</span>
+                <span className="tabular-nums block text-[15px] font-bold">{c.phone}</span>
+              </a>
+            ))}
             <Link
               href="/kontakt/"
               className="pressable rounded-md border border-on-brand/30 px-6 py-3.5 text-[16px] font-semibold transition-colors duration-200 hover:border-on-brand/60"

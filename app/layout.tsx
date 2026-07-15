@@ -23,12 +23,16 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Bastech Betriebe AG | Maschinenservice für die grafische Industrie",
+    default: "Bastech Betriebe AG | Maschinenservice und Handel für die Industrie",
     template: "%s | Bastech Betriebe AG",
   },
   description:
-    "Service, Revisionen, Reparaturen und Occasionsmaschinen für Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik. Schweizweit im Einsatz. Bastech Betriebe AG, Mehlsecken LU.",
+    "Service, Revisionen, Reparaturen, Ersatzteile und Occasionsmaschinen für die Schweizer Industrie: Produktions-, Verpackungs- und Förderanlagen, Druckweiterverarbeitung und Umreifungstechnik. Bastech Betriebe AG, Mehlsecken LU.",
   keywords: [
+    "Industrieservice",
+    "Maschinenreparatur",
+    "Verpackungstechnik",
+    "Fördertechnik",
     "Maschinenservice",
     "Druckweiterverarbeitung",
     "Buchbinderei",
@@ -45,9 +49,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_CH",
     siteName: site.name,
-    title: "Bastech Betriebe AG | Maschinenservice für die grafische Industrie",
+    title: "Bastech Betriebe AG | Maschinenservice und Handel für die Industrie",
     description:
-      "Service, Revisionen, Reparaturen und Occasionsmaschinen für Druckweiterverarbeitung, Buchbinderei und Umreifungstechnik. Schweizweit im Einsatz.",
+      "Service, Revisionen, Reparaturen und Occasionsmaschinen für die Schweizer Industrie. Schweizweit im Einsatz.",
     images: [{ url: "/images/maschine-3.jpeg", width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
@@ -59,7 +63,7 @@ const jsonLd = {
   "@id": `${site.url}/#business`,
   name: site.name,
   description:
-    "Technische Dienstleistung und Handel für die Industrie: Service, Revisionen, mechanische Reparaturen, Ersatzteile und Occasionsmaschinen für die grafische Industrie.",
+    "Technische Dienstleistung und Handel für die Industrie: Service, Revisionen, mechanische Reparaturen, Ersatzteile und Occasionsmaschinen für Produktions-, Verpackungs- und Förderanlagen in der ganzen Schweiz.",
   url: site.url,
   telephone: "+41793886768",
   email: site.email,
@@ -81,6 +85,9 @@ const jsonLd = {
     "Umreifungstechnik",
     "Banderoliermaschinen",
     "Maschinenrevision",
+    "Verpackungstechnik",
+    "Fördertechnik",
+    "Industrieautomation",
   ],
 };
 

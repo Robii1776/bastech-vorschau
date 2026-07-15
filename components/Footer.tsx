@@ -37,16 +37,13 @@ export function Footer() {
               <li>
                 {site.address.street}, {site.address.zip} {site.address.city}
               </li>
-              <li>
-                <a href={site.phoneHref} className="tabular-nums transition-colors duration-200 hover:text-on-brand">
-                  {site.phone}
-                </a>
-              </li>
-              <li>
-                <a href={site.phone2Href} className="tabular-nums transition-colors duration-200 hover:text-on-brand">
-                  {site.phone2}
-                </a>
-              </li>
+              {site.contacts.map((c) => (
+                <li key={c.short}>
+                  <a href={c.href} className="transition-colors duration-200 hover:text-on-brand">
+                    {c.short} <span className="tabular-nums">{c.phone}</span>
+                  </a>
+                </li>
+              ))}
               <li>
                 <a
                   href={`mailto:${site.email}`}

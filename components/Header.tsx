@@ -80,12 +80,17 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <a
-            href={site.phoneHref}
-            className="tabular-nums text-[14px] font-medium text-ink-soft transition-colors duration-200 hover:text-brand"
-          >
-            {site.phone}
-          </a>
+          <div className="flex flex-col items-end gap-0.5">
+            {site.contacts.map((c) => (
+              <a
+                key={c.short}
+                href={c.href}
+                className="text-[13px] font-medium leading-tight text-ink-soft transition-colors duration-200 hover:text-brand"
+              >
+                {c.short} <span className="tabular-nums font-semibold">{c.phone}</span>
+              </a>
+            ))}
+          </div>
           <Link
             href="/kontakt/"
             className="pressable rounded-md bg-brand px-5 py-2.5 text-[15px] font-semibold text-on-brand transition-colors duration-200 hover:bg-brand-deep"

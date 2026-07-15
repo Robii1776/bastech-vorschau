@@ -29,11 +29,12 @@ export default function UeberUnsPage() {
                 handelt und, wenn nötig, neu erfindet.
               </p>
               <p>
-                Unsere Kundschaft sind Druckereien, Buchbindereien, Weiterverarbeitungs- und
-                Verpackungsbetriebe in der ganzen Schweiz. Viele arbeiten mit Maschinen, für die
+                Unsere Kundschaft sind Druckereien, Buchbindereien, Verpackungs-, Logistik- und
+                Industriebetriebe in der ganzen Schweiz. Viele arbeiten mit Maschinen, für die
                 es offiziell keinen Support mehr gibt. Genau da fangen wir an: Wir kennen die
                 alten Generationen von Müller Martini, MBO, Tanner, Strapex und Mosca so gut wie
-                die aktuellen.
+                die aktuellen, und über unser Netzwerk decken wir auch Automation, Robotik und
+                Fördertechnik ab.
               </p>
               <p>
                 Wir bleiben bewusst klein und direkt. Wer bei uns anruft, spricht mit Inhaber
@@ -144,6 +145,125 @@ export default function UeberUnsPage() {
               />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Vertriebspartner */}
+      <section id="partner" className="border-y border-line bg-surface">
+        <div className="mx-auto max-w-[1320px] px-5 py-20 sm:px-8 md:py-24">
+          <Reveal>
+            <h2 className="max-w-[24ch] text-3xl sm:text-4xl">
+              Unser Partner für Automation und Vertrieb
+            </h2>
+            <p className="mt-3 max-w-[58ch] text-[16px] leading-relaxed text-ink-soft">
+              Für Industrieautomation, Robotik, Fördertechnik sowie Verpackungs- und
+              End-of-Line-Systeme arbeiten wir eng mit Colangelo Industrial Solutions zusammen.
+              Bastech übernimmt dabei die technische Unterstützung, Inbetriebnahme und den
+              After-Sales-Service direkt in der Schweiz.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 grid items-start gap-12 lg:grid-cols-[340px_1fr]">
+            <Reveal>
+              <figure>
+                <div className="img-frame relative aspect-[4/5] rounded-lg">
+                  <Image
+                    src={asset("/images/team-elvis.jpeg")}
+                    alt="Elvis Colangelo, Business Development & Sales Partner, Colangelo Industrial Solutions"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 340px"
+                    className="rounded-lg object-cover"
+                  />
+                </div>
+                <figcaption className="mt-3 text-[15px]">
+                  <span className="font-semibold">Elvis Colangelo</span>
+                  <span className="block text-[13px] text-ink-soft">
+                    Business Development &amp; Sales Partner, Colangelo Industrial Solutions
+                  </span>
+                </figcaption>
+              </figure>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="max-w-[62ch] space-y-5 text-[16px] leading-relaxed text-ink-soft">
+                <p>
+                  Mit über 23 Jahren Erfahrung in der Schweizer Industrie unterstützt Elvis
+                  Colangelo italienische und europäische Unternehmen beim erfolgreichen
+                  Markteintritt sowie beim Ausbau ihrer Geschäftstätigkeit in der Schweiz.
+                </p>
+                <p>
+                  Colangelo Industrial Solutions ist spezialisiert auf Business Development,
+                  technischen Vertrieb sowie individuelle Lösungen in den Bereichen
+                  Industrieautomation, Robotik, Fördertechnik sowie Verpackungs- und
+                  End-of-Line-Systeme.
+                </p>
+                <p>
+                  Gemeinsam mit den Technologiepartnern begleitet er Kunden von der technischen
+                  Beratung über die Projektentwicklung bis zur erfolgreichen Umsetzung. Dank der
+                  Zusammenarbeit mit der Bastech Betriebe AG sind kompetente technische
+                  Unterstützung, Inbetriebnahme und ein zuverlässiger After-Sales-Service direkt
+                  in der Schweiz gewährleistet.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <h3 className="text-[15px] font-bold">Kernkompetenzen</h3>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {[
+                    "Business Development Schweiz",
+                    "Technischer Vertrieb",
+                    "Industrieautomation",
+                    "Robotik",
+                    "Fördertechnik",
+                    "Verpackungs- und End-of-Line-Lösungen",
+                    "Projektmanagement",
+                    "Technische Beratung",
+                    "After-Sales-Service",
+                  ].map((k) => (
+                    <li
+                      key={k}
+                      className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[13px] font-semibold"
+                    >
+                      {k}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8 grid gap-8 sm:grid-cols-2">
+                <div>
+                  <h3 className="text-[15px] font-bold">Sprachen</h3>
+                  <ul className="mt-3 space-y-1.5 text-[15px] text-ink-soft">
+                    <li>Deutsch, Muttersprache</li>
+                    <li>Italienisch, Muttersprache</li>
+                    <li>Englisch, gute Kenntnisse</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-[15px] font-bold">Kontakt</h3>
+                  <address className="mt-3 space-y-1.5 text-[15px] not-italic leading-relaxed text-ink-soft">
+                    <span className="block">
+                      Colangelo Industrial Solutions
+                      <br />
+                      Via P. e L. Chiesa 5, 6830 Chiasso TI
+                    </span>
+                    <a
+                      href="mailto:cis.swiss@icloud.com"
+                      className="block font-medium text-brand transition-colors duration-200 hover:text-brand-deep"
+                    >
+                      cis.swiss@icloud.com
+                    </a>
+                    <a
+                      href="tel:+41792708161"
+                      className="tabular-nums block font-medium text-brand transition-colors duration-200 hover:text-brand-deep"
+                    >
+                      +41 79 270 81 61
+                    </a>
+                  </address>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

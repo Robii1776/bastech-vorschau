@@ -37,7 +37,13 @@ function wa(text: string) {
 }
 
 const contactActions = (betreff: string, waText: string): Action[] => [
-  { label: site.phone, href: site.phoneHref, kind: "primary" },
+  ...site.contacts.map(
+    (c): Action => ({
+      label: `${c.short} ${c.phone}`,
+      href: c.href,
+      kind: c === site.contacts[0] ? "primary" : "ghost",
+    })
+  ),
   { label: "Per WhatsApp senden", href: wa(waText), external: true, kind: "ghost" },
   { label: "Anfrage-Formular", href: `/kontakt/?betreff=${encodeURIComponent(betreff)}`, kind: "ghost" },
 ];
@@ -123,7 +129,7 @@ function botReply(intent: string, detail?: string): Msg[] {
             "Das klärt sich am schnellsten im direkten Gespräch. Rufen Sie an oder schreiben Sie per WhatsApp, Sie erhalten innert 24 Stunden eine Rückmeldung. Oder wählen Sie eines der Themen:",
           chips: START_CHIPS,
           actions: [
-            { label: site.phone, href: site.phoneHref, kind: "primary" },
+            { label: `${site.contacts[0].short} ${site.contacts[0].phone}`, href: site.contacts[0].href, kind: "primary" },
             { label: "WhatsApp", href: wa(""), external: true, kind: "ghost" },
           ],
         },

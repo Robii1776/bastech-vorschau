@@ -29,19 +29,17 @@ export default function KontaktPage() {
             <div className="space-y-8">
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-wider text-ink-soft">Telefon</p>
-                <div className="mt-2 space-y-1">
-                  <a
-                    href={site.phoneHref}
-                    className="block tabular-nums text-2xl font-medium text-brand transition-colors duration-200 hover:text-brand-deep"
-                  >
-                    {site.phone}
-                  </a>
-                  <a
-                    href={site.phone2Href}
-                    className="block tabular-nums text-lg text-ink-soft transition-colors duration-200 hover:text-brand"
-                  >
-                    {site.phone2}
-                  </a>
+                <div className="mt-3 space-y-4">
+                  {site.contacts.map((c) => (
+                    <a key={c.short} href={c.href} className="group block">
+                      <span className="block text-[13px] font-semibold text-ink-soft">
+                        {c.name}, {c.role}
+                      </span>
+                      <span className="tabular-nums block text-2xl font-bold text-brand transition-colors duration-200 group-hover:text-brand-deep">
+                        {c.phone}
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </div>
 
