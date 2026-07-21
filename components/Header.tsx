@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { nav, site } from "@/lib/site";
 import { asset } from "@/lib/asset";
 
@@ -12,7 +12,6 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -33,19 +32,21 @@ export function Header() {
   }, [open]);
 
   return (
+    // Kein backdrop-filter im Header: er würde zum Containing Block für das
+    // fixe Mobile-Menü und kollabiert dessen Höhe auf 0.
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b bg-bg/95 backdrop-blur-md transition-shadow duration-300 ${
-        scrolled && !open ? "border-line shadow-[0_1px_8px_rgba(15,30,50,0.06)]" : "border-line"
+      className={`fixed inset-x-0 top-0 z-50 border-b border-line bg-bg transition-shadow duration-300 ${
+        scrolled && !open ? "shadow-[0_1px_8px_rgba(15,30,50,0.06)]" : ""
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between gap-6 px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="Bastech Betriebe AG, Startseite">
           <Image
-            src={asset("/images/logo.jpeg")}
+            src={asset("/images/logo-mark.png")}
             alt=""
             width={44}
-            height={44}
-            className="h-11 w-11 rounded-full object-cover"
+            height={52}
+            className="h-11 w-auto"
             priority
           />
           <span className="leading-tight">
@@ -126,62 +127,46 @@ export function Header() {
         </button>
       </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-            className="fixed inset-0 top-20 z-40 bg-bg lg:hidden"
+      {/* Bewusst ohne JS-Animation: Menüinhalt darf nie unsichtbar hängen,
+          der sanfte Einstieg kommt rein aus CSS (@starting-style). */}
+      {open && (
+        <div className="menu-overlay fixed inset-0 top-20 z-40 overflow-y-auto bg-bg lg:hidden">
+          <nav
+            className="flex min-h-full flex-col justify-between px-6 pb-10 pt-8"
+            aria-label="Mobile Navigation"
           >
-            <nav className="flex h-full flex-col justify-between px-6 pb-10 pt-8" aria-label="Mobile Navigation">
-              <motion.ul
-                initial="hidden"
-                animate="visible"
-                variants={{ visible: { transition: { staggerChildren: 0.05, delayChildren: 0.05 } }, hidden: {} }}
-                className="space-y-2"
-              >
-                {nav.map((item) => (
-                  <motion.li
-                    key={item.href}
-                    variants={{
-                      hidden: { opacity: 0, y: reduceMotion ? 0 : 14 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.23, 1, 0.32, 1] } },
-                    }}
+            <ul className="space-y-2">
+              {nav.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="block border-b border-line py-4 text-2xl font-semibold"
                   >
-                    <Link
-                      href={item.href}
-                      className="block border-b border-line py-4 text-2xl font-semibold"
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.li>
-                ))}
-              </motion.ul>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.25, duration: 0.4 } }}
-                className="space-y-3"
-              >
-                <a
-                  href={site.phoneHref}
-                  className="block tabular-nums text-lg font-medium text-brand"
-                >
-                  {site.phone}
+            <div className="mt-8 space-y-4">
+              {site.contacts.map((c) => (
+                <a key={c.short} href={c.href} className="block">
+                  <span className="block text-[13px] font-semibold text-ink-soft">
+                    {c.short} · {c.role}
+                  </span>
+                  <span className="tabular-nums block text-lg font-bold text-brand">{c.phone}</span>
                 </a>
-                <Link
-                  href="/kontakt/"
-                  className="pressable block rounded-md bg-brand px-6 py-4 text-center text-lg font-semibold text-on-brand"
-                >
-                  Service anfragen
-                </Link>
-              </motion.div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              ))}
+              <Link
+                href="/kontakt/"
+                className="pressable block rounded-md bg-brand px-6 py-4 text-center text-lg font-semibold text-on-brand"
+              >
+                Service anfragen
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
