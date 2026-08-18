@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Occasionsmaschinen und Ersatzteile, geprüft und einsatzbereit",
   description:
-    "Geprüfte Occasionsmaschinen für Druckweiterverarbeitung und Umreifungstechnik: Tanner, Strapex, Mosca, MBO und mehr. Plus Ersatzteile, Motoren, Pumpen und Steuerungen. Bastech Betriebe AG.",
+    "Geprüfte Occasionsmaschinen für die Industrie: Umreifungs- und Banderoliermaschinen von Tanner, Strapex, Mosca, MBO und mehr. Plus Ersatzteile, Motoren, Pumpen und Steuerungen. Bastech Betriebe AG.",
 };
 
 export default function MaschinenPage() {

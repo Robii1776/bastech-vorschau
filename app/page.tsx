@@ -47,7 +47,7 @@ const faqItems: FaqItem[] = [
   },
   {
     q: "Welche Maschinen und Hersteller betreut Bastech?",
-    a: "Unsere Wurzeln liegen in der Druckweiterverarbeitung und Buchbinderei, heute betreuen wir Produktions-, Verpackungs- und Förderanlagen in der ganzen Industrie: Falz-, Banderolier- und Umreifungsmaschinen, Anleger, Antriebe und Zusatzaggregate, unter anderem von Müller Martini, MBO, Tanner, Strapex und Mosca.",
+    a: "Wir betreuen Produktions-, Verpackungs- und Förderanlagen in der ganzen Industrie: Umreifungs- und Banderoliermaschinen, Falzmaschinen, Anleger, Antriebe, Pumpen, Steuerungen und Zusatzaggregate, unter anderem von Müller Martini, MBO, Tanner, Strapex, Mosca, Siemens und SEW. Fragen Sie auch bei anderen Herstellern an, wir kennen die meisten."
   },
   {
     q: "Verkauft Bastech auch geprüfte Occasionsmaschinen?",
@@ -89,9 +89,8 @@ export default function HomePage() {
               </h1>
               <p className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-on-brand/75">
                 Reparaturen, Revisionen, Ersatzteile und geprüfte Occasionsmaschinen für
-                Produktions-, Verpackungs- und Förderanlagen. Tief verwurzelt in der grafischen
-                Industrie, im Einsatz für die ganze Schweizer Industrie. Wer anruft, spricht
-                direkt mit dem Techniker.
+                Produktions-, Verpackungs- und Förderanlagen in der ganzen Schweizer Industrie.
+                Wer anruft, spricht direkt mit dem Techniker.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 {site.contacts.map((c) => (
@@ -130,9 +129,9 @@ export default function HomePage() {
                     />
                   ))}
                 </div>
-                <p className="max-w-[36ch] text-[14px] font-medium leading-snug text-on-brand/70">
+                <p className="max-w-[40ch] text-[14px] font-medium leading-snug text-on-brand/70">
                   Sie sprechen direkt mit André und Danilo. Rückmeldung unter 24 Stunden,
-                  schweizweit im Einsatz.
+                  schweizweit im Einsatz, bei Stillstand auch ausserhalb der Bürozeiten erreichbar.
                 </p>
               </div>
               <Link
@@ -266,7 +265,7 @@ export default function HomePage() {
               {[
                 [
                   "Fachwissen, das man nicht googeln kann",
-                  "Jahrzehntelange Erfahrung mit Produktions- und Verpackungsanlagen, besonders tief in Druckweiterverarbeitung und Umreifungstechnik, auch bei Maschinen ohne offiziellen Hersteller-Support.",
+                  "Jahrzehntelange Erfahrung mit Produktions-, Verpackungs- und Umreifungsanlagen quer durch die Industrie, auch bei Maschinen ohne offiziellen Hersteller-Support.",
                 ],
                 [
                   "Einsatzbereitschaft & Flexibilität",

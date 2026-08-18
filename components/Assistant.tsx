@@ -117,7 +117,7 @@ function botReply(intent: string, detail?: string): Msg[] {
         {
           from: "bot",
           text:
-            "Wir kaufen Maschinen aus Druckweiterverarbeitung, Buchbinderei und Verpackung. Senden Sie uns Hersteller, Typ, Baujahr und zwei, drei Fotos per WhatsApp. Sie erhalten eine faire Einschätzung, ohne Verpflichtung. Demontage und Abtransport übernehmen wir bei Bedarf.",
+            "Wir kaufen Produktions- und Verpackungsmaschinen aus der Industrie. Senden Sie uns Hersteller, Typ, Baujahr und zwei, drei Fotos per WhatsApp. Sie erhalten eine faire Einschätzung, ohne Verpflichtung. Demontage und Abtransport übernehmen wir bei Bedarf.",
           actions: contactActions("Maschine verkaufen", "Maschine zu verkaufen: "),
         },
       ];

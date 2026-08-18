@@ -8,7 +8,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "Über uns: Maschinenbau-Handwerk aus dem Kanton Luzern",
   description:
-    "Die Bastech Betriebe AG steht seit 2008 für technische Dienstleistung und Handel in der grafischen Industrie. Lernen Sie den Betrieb aus Mehlsecken LU kennen.",
+    "Die Bastech Betriebe AG steht seit 2008 für technische Dienstleistung und Handel für die Industrie. Lernen Sie den Betrieb aus Mehlsecken LU kennen.",
 };
 
 export default function UeberUnsPage() {
@@ -24,13 +24,13 @@ export default function UeberUnsPage() {
             <div className="mt-8 max-w-[62ch] space-y-5 text-[16px] leading-relaxed text-ink-soft">
               <p>
                 Die Bastech Betriebe AG ist seit {site.founded} als Aktiengesellschaft im Kanton
-                Luzern zu Hause. Was als technische Dienstleistung für die grafische Industrie
-                begann, ist heute ein Betrieb, der Maschinen wartet, revidiert, repariert,
-                handelt und, wenn nötig, neu erfindet.
+                Luzern zu Hause. Ein Betrieb, der Industriemaschinen wartet, revidiert,
+                repariert, handelt und, wenn nötig, neu erfindet.
               </p>
               <p>
-                Unsere Kundschaft sind Druckereien, Buchbindereien, Verpackungs-, Logistik- und
-                Industriebetriebe in der ganzen Schweiz. Viele arbeiten mit Maschinen, für die
+                Unsere Kundschaft sind Produktions-, Verpackungs-, Logistik- und
+                Industriebetriebe in der ganzen Schweiz, darunter auch Druckereien und
+                Buchbindereien. Viele arbeiten mit Maschinen, für die
                 es offiziell keinen Support mehr gibt. Genau da fangen wir an: Wir kennen die
                 alten Generationen von Müller Martini, MBO, Tanner, Strapex und Mosca so gut wie
                 die aktuellen, und über unser Netzwerk decken wir auch Automation, Robotik und

@@ -14,7 +14,8 @@ export function CtaBand() {
           </h2>
           <p className="mt-4 max-w-[52ch] text-[16px] leading-relaxed text-on-brand/75">
             Schildern Sie uns kurz das Problem. Sie erhalten innert 24 Stunden eine Rückmeldung
-            mit dem weiteren Vorgehen. Unkompliziert, ehrlich und ohne Callcenter.
+            mit dem weiteren Vorgehen, bei Stillstand auch ausserhalb der Bürozeiten.
+            Unkompliziert, ehrlich und ohne Callcenter.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             {site.contacts.map((c) => (

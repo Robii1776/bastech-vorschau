@@ -31,7 +31,7 @@ const sections = [
     id: "reparaturen",
     title: "Mechanische Reparaturen",
     lead: "Schnelle Diagnose, fachgerechte Instandsetzung.",
-    text: "Wenn eine Maschine steht, zählt jede Stunde. Wir finden die Ursache statt nur das Symptom, ob mechanisch, pneumatisch oder steuerungsseitig, und setzen instand: vor Ort bei Ihnen oder in unserer Werkstatt. Das gilt für Anlagen aus der ganzen Industrie, nicht nur aus der grafischen.",
+    text: "Wenn eine Maschine steht, zählt jede Stunde. Wir finden die Ursache statt nur das Symptom, ob mechanisch, pneumatisch oder steuerungsseitig, und setzen instand: vor Ort bei Ihnen oder in unserer Werkstatt.",
     points: [
       "Fehlerdiagnose an Mechanik, Pneumatik und Steuerung",
       "Einsätze vor Ort in der ganzen Schweiz",
@@ -45,7 +45,7 @@ const sections = [
     id: "ersatzteile",
     title: "Ersatzteile",
     lead: "Auch für Maschinen, die offiziell keinen Support mehr haben.",
-    text: "Wir liefern Ersatz- und Verschleissteile für Druckweiterverarbeitung und Umreifungstechnik, von Müller Martini über MBO bis Tanner. Vieles ab Lager, anderes über unser Netzwerk, notfalls als Nachfertigung.",
+    text: "Wir liefern Ersatz- und Verschleissteile für Produktions-, Verpackungs- und Umreifungsanlagen: Motoren, Pumpen, Frequenzumrichter, Steuerungen, Messer und Lager, von Siemens über SEW bis Tanner. Vieles ab Lager, anderes über unser Netzwerk, notfalls als Nachfertigung.",
     points: [
       "Verschleiss- und Ersatzteile ab eigenem Lager",
       "Beschaffung über langjähriges Branchennetzwerk",
@@ -59,7 +59,7 @@ const sections = [
     id: "handel",
     title: "Handel & Occasionsmaschinen",
     lead: "Geprüfte Maschinen mit ehrlicher Zustandsbeschreibung.",
-    text: "Wir kaufen und verkaufen Maschinen für Druckweiterverarbeitung, Buchbinderei und Verpackung. Jede Occasion wird geprüft, bei Bedarf revidiert und transparent beschrieben. Besichtigen und Testen ausdrücklich erwünscht.",
+    text: "Wir kaufen und verkaufen Produktions- und Verpackungsmaschinen für die Industrie. Jede Occasion wird geprüft, bei Bedarf revidiert und transparent beschrieben. Besichtigen und Testen ausdrücklich erwünscht.",
     points: [
       "An- und Verkauf von Occasionsmaschinen",
       "Revision und Prüfung vor jeder Übergabe",
@@ -95,7 +95,7 @@ export default function LeistungenPage() {
           </h1>
           <p className="mt-6 max-w-[58ch] text-[17px] leading-relaxed text-ink-soft">
             Von der vorbeugenden Wartung bis zur Sonderkonstruktion: Wir halten Ihre Produktion
-            am Laufen, von der Druckweiterverarbeitung über Verpackungslinien bis zur
+            am Laufen, von der Einzelmaschine über Verpackungslinien bis zur
             Fördertechnik. Mit kurzen Wegen und Ansprechpartnern, welche die Maschinen wirklich
             kennen.
           </p>
