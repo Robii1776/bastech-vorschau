@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-18T11:49:10.437570+00:00",
+  "title": "Design System: Bastech Betriebe AG",
+  "extensions": {
+    "colorMeta": {
+      "bastech-blau": {
+        "role": "primary",
+        "displayName": "Bastech-Blau",
+        "canonical": "oklch(45% 0.088 253)",
+        "tonalRamp": [
+          "oklch(15% 0.088 253)",
+          "oklch(25% 0.088 253)",
+          "oklch(35% 0.088 253)",
+          "oklch(45% 0.088 253)",
+          "oklch(58% 0.088 253)",
+          "oklch(72% 0.088 253)",
+          "oklch(85% 0.088 253)",
+          "oklch(95% 0.088 253)"
+        ]
+      },
+      "nachtblau": {
+        "role": "primary",
+        "displayName": "Nachtblau",
+        "canonical": "oklch(29% 0.058 255)",
+        "tonalRamp": [
+          "oklch(15% 0.058 255)",
+          "oklch(25% 0.058 255)",
+          "oklch(35% 0.058 255)",
+          "oklch(45% 0.058 255)",
+          "oklch(58% 0.058 255)",
+          "oklch(72% 0.058 255)",
+          "oklch(85% 0.058 255)",
+          "oklch(95% 0.058 255)"
+        ]
+      },
+      "himmelblau": {
+        "role": "primary",
+        "displayName": "Himmelblau",
+        "canonical": "oklch(80% 0.05 250)",
+        "tonalRamp": [
+          "oklch(15% 0.05 250)",
+          "oklch(25% 0.05 250)",
+          "oklch(35% 0.05 250)",
+          "oklch(45% 0.05 250)",
+          "oklch(58% 0.05 250)",
+          "oklch(72% 0.05 250)",
+          "oklch(85% 0.05 250)",
+          "oklch(95% 0.05 250)"
+        ]
+      },
+      "blauton": {
+        "role": "primary",
+        "displayName": "Blauton",
+        "canonical": "oklch(93.5% 0.018 250)",
+        "tonalRamp": [
+          "oklch(15% 0.018 250)",
+          "oklch(25% 0.018 250)",
+          "oklch(35% 0.018 250)",
+          "oklch(45% 0.018 250)",
+          "oklch(58% 0.018 250)",
+          "oklch(72% 0.018 250)",
+          "oklch(85% 0.018 250)",
+          "oklch(95% 0.018 250)"
+        ]
+      },
+      "stahlgrau": {
+        "role": "neutral",
+        "displayName": "Stahlgrau",
+        "canonical": "oklch(23% 0.025 255)",
+        "tonalRamp": [
+          "oklch(15% 0.025 255)",
+          "oklch(25% 0.025 255)",
+          "oklch(35% 0.025 255)",
+          "oklch(45% 0.025 255)",
+          "oklch(58% 0.025 255)",
+          "oklch(72% 0.025 255)",
+          "oklch(85% 0.025 255)",
+          "oklch(95% 0.025 255)"
+        ]
+      },
+      "stahlgrau-weich": {
+        "role": "neutral",
+        "displayName": "Stahlgrau weich",
+        "canonical": "oklch(42% 0.02 255)",
+        "tonalRamp": [
+          "oklch(15% 0.02 255)",
+          "oklch(25% 0.02 255)",
+          "oklch(35% 0.02 255)",
+          "oklch(45% 0.02 255)",
+          "oklch(58% 0.02 255)",
+          "oklch(72% 0.02 255)",
+          "oklch(85% 0.02 255)",
+          "oklch(95% 0.02 255)"
+        ]
+      },
+      "linie": {
+        "role": "neutral",
+        "displayName": "Linie",
+        "canonical": "oklch(89% 0.008 250)",
+        "tonalRamp": [
+          "oklch(15% 0.008 250)",
+          "oklch(25% 0.008 250)",
+          "oklch(35% 0.008 250)",
+          "oklch(45% 0.008 250)",
+          "oklch(58% 0.008 250)",
+          "oklch(72% 0.008 250)",
+          "oklch(85% 0.008 250)",
+          "oklch(95% 0.008 250)"
+        ]
+      },
+      "papier": {
+        "role": "neutral",
+        "displayName": "Papier",
+        "canonical": "oklch(98.6% 0.002 247)",
+        "tonalRamp": [
+          "oklch(15% 0.002 247)",
+          "oklch(25% 0.002 247)",
+          "oklch(35% 0.002 247)",
+          "oklch(45% 0.002 247)",
+          "oklch(58% 0.002 247)",
+          "oklch(72% 0.002 247)",
+          "oklch(85% 0.002 247)",
+          "oklch(95% 0.002 247)"
+        ]
+      },
+      "fläche": {
+        "role": "neutral",
+        "displayName": "Fläche",
+        "canonical": "oklch(96.2% 0.005 247)",
+        "tonalRamp": [
+          "oklch(15% 0.005 247)",
+          "oklch(25% 0.005 247)",
+          "oklch(35% 0.005 247)",
+          "oklch(45% 0.005 247)",
+          "oklch(58% 0.005 247)",
+          "oklch(72% 0.005 247)",
+          "oklch(85% 0.005 247)",
+          "oklch(95% 0.005 247)"
+        ]
+      },
+      "weiss-auf-blau": {
+        "role": "neutral",
+        "displayName": "Weiss auf Blau",
+        "canonical": "oklch(98% 0.005 250)",
+        "tonalRamp": [
+          "oklch(15% 0.005 250)",
+          "oklch(25% 0.005 250)",
+          "oklch(35% 0.005 250)",
+          "oklch(45% 0.005 250)",
+          "oklch(58% 0.005 250)",
+          "oklch(72% 0.005 250)",
+          "oklch(85% 0.005 250)",
+          "oklch(95% 0.005 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Nur die Hero-Headline; zweiter Satzteil in Himmelblau."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sektionstitel (h2), 18–24ch, balance."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Kartentitel, Leistungszeilen, h3, Personennamen."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Fliesstext 15–17px, max 52–64ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rollen, Kicker, Bildunterschriften, Chips, Button-Text."
+      },
+      "numeric": {
+        "displayName": "Numeric",
+        "purpose": "Telefon, CHF, Baujahr, UID; tabellarisch und fett."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-hover",
+        "value": "0 8px 24px -12px rgba(20,40,70,0.25)",
+        "purpose": "Occasionskarten bei Hover."
+      },
+      {
+        "name": "hero-image",
+        "value": "0 32px 80px -32px rgba(5,15,35,0.8)",
+        "purpose": "Einmalig unter dem Duotone-Bild im Hero."
+      },
+      {
+        "name": "floating",
+        "value": "0 24px 64px -24px rgba(15,30,50,0.45)",
+        "purpose": "Assistenten-Panel."
+      },
+      {
+        "name": "floating-button",
+        "value": "0 8px 24px -8px rgba(15,30,50,0.5)",
+        "purpose": "Assistenten-Button."
+      },
+      {
+        "name": "header-scrolled",
+        "value": "0 1px 8px rgba(15,30,50,0.06)",
+        "purpose": "Fixer Header nach dem ersten Scroll."
+      },
+      {
+        "name": "image-info-card",
+        "value": "0 8px 24px -12px rgba(5,15,35,0.5)",
+        "purpose": "Weisse Info-Karte auf dem Hero-Bild."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-strong",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Standard für Enter, Hover, Press (160–220ms)."
+      },
+      {
+        "name": "ease-in-out-strong",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Clip-Path-Bildreveal (800ms)."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0→1, translateY 24px→0, 600ms ease-out-strong, once, margin -60px",
+        "purpose": "Scroll-Reveal; Server-HTML sichtbar, nur nach Hydration und in sichtbaren Tabs."
+      },
+      {
+        "name": "stagger",
+        "value": "60ms zwischen Listenelementen, 500ms je Element",
+        "purpose": "Listen und Kartengrids."
+      },
+      {
+        "name": "marquee-logos",
+        "value": "translateX 0→-50%, 46s linear infinite, pausiert bei Hover",
+        "purpose": "Herstellerband."
+      },
+      {
+        "name": "marquee-kinetic",
+        "value": "translateX 0→-50%, 70s linear infinite",
+        "purpose": "Umriss-Textband."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.97), 160ms ease-out-strong",
+        "purpose": "Alle Buttons und Chips bei :active."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "container",
+        "value": "1320px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primärer Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Hauptaktion (Service anfragen, Senden). Bastech-Blau, Hover Nachtblau, Druck-Feedback.",
+      "html": "<button class=\"ds-btn-primary\">Service anfragen</button>",
+      "css": ".ds-btn-primary { font-family: Archivo, system-ui, sans-serif; background: oklch(45% 0.088 253); color: oklch(98% 0.005 250); font-size: 16px; font-weight: 600; padding: 16px 28px; border: none; border-radius: 6px; cursor: pointer; transition: background-color 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-primary:hover { background: oklch(29% 0.058 255); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid oklch(45% 0.088 253); outline-offset: 2px; }"
+    },
+    {
+      "name": "Telefon-Button (Inverse auf Nachtblau)",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Zweizeiliger Kontakt-Button mit Name, Rolle und tabellarischer Nummer; steht auf Nachtblau-Flächen.",
+      "html": "<div class=\"ds-band\"><a class=\"ds-btn-inverse\" href=\"tel:+41793886768\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span class=\"ds-btn-inverse__text\"><span class=\"ds-btn-inverse__label\">André · Inhaber</span><span class=\"ds-btn-inverse__num\">079 388 67 68</span></span></a></div>",
+      "css": ".ds-band { background: oklch(29% 0.058 255); padding: 24px; display: inline-block; border-radius: 8px; } .ds-btn-inverse { font-family: Archivo, system-ui, sans-serif; display: inline-flex; align-items: center; gap: 12px; background: #ffffff; color: oklch(29% 0.058 255); padding: 14px 20px; border-radius: 6px; text-decoration: none; transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-inverse:hover { opacity: 0.9; } .ds-btn-inverse:active { transform: scale(0.97); } .ds-btn-inverse__text { display: flex; flex-direction: column; line-height: 1.2; } .ds-btn-inverse__label { font-size: 12px; font-weight: 600; color: oklch(45% 0.088 253); } .ds-btn-inverse__num { font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Ghost-Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Sekundäre Aktion mit Linie-Rahmen; Hover färbt Rahmen und Text Bastech-Blau.",
+      "html": "<button class=\"ds-btn-ghost\">Per WhatsApp schreiben</button>",
+      "css": ".ds-btn-ghost { font-family: Archivo, system-ui, sans-serif; background: #ffffff; color: oklch(23% 0.025 255); font-size: 16px; font-weight: 600; padding: 16px 28px; border: 1px solid oklch(89% 0.008 250); border-radius: 6px; cursor: pointer; transition: border-color 200ms cubic-bezier(0.23, 1, 0.32, 1), color 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-ghost:hover { border-color: oklch(45% 0.088 253); color: oklch(45% 0.088 253); } .ds-btn-ghost:active { transform: scale(0.97); } .ds-btn-ghost:focus-visible { outline: 2px solid oklch(45% 0.088 253); outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Sprungmarken, Assistenten-Themen, Kompetenzen. Vollrund, Linie-Rahmen, Hover Bastech-Blau.",
+      "html": "<span class=\"ds-chip\">Service &amp; Revisionen</span> <span class=\"ds-chip\">Ersatzteile</span>",
+      "css": ".ds-chip { font-family: Archivo, system-ui, sans-serif; display: inline-block; background: #ffffff; color: oklch(23% 0.025 255); font-size: 13px; font-weight: 600; padding: 6px 14px; border: 1px solid oklch(89% 0.008 250); border-radius: 9999px; margin: 2px; transition: border-color 200ms cubic-bezier(0.23, 1, 0.32, 1), color 200ms cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; } .ds-chip:hover { border-color: oklch(45% 0.088 253); color: oklch(45% 0.088 253); }"
+    },
+    {
+      "name": "Occasions-Karte",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Ware in Echtfarbe: Bild 4:3, Kategoriezeile uppercase, Titel, Notiz, Preis tabellarisch, Anfragen-Link mit Pfeil. Schatten nur bei Hover.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card__img\"></div><div class=\"ds-card__body\"><p class=\"ds-card__cat\">Banderoliermaschine · 2017</p><h3 class=\"ds-card__title\">Tanner US-2000 AD</h3><p class=\"ds-card__note\">Geprüft und einsatzbereit, mit ATS-Bedienpanel.</p><div class=\"ds-card__foot\"><span class=\"ds-card__price\">CHF 3'500.– VB</span><a class=\"ds-card__link\" href=\"#\">Anfragen <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/><polyline points=\"12 5 19 12 12 19\"/></svg></a></div></div></article>",
+      "css": ".ds-card { font-family: Archivo, system-ui, sans-serif; width: 300px; background: #ffffff; border: 1px solid oklch(89% 0.008 250); border-radius: 8px; overflow: hidden; color: oklch(23% 0.025 255); transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-card:hover { box-shadow: 0 8px 24px -12px rgba(20,40,70,0.25); } .ds-card__img { aspect-ratio: 4/3; background: oklch(96.2% 0.005 247); } .ds-card__body { padding: 20px; } .ds-card__cat { margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; color: oklch(42% 0.02 255); font-variant-numeric: tabular-nums; } .ds-card__title { margin: 6px 0 0; font-size: 18px; font-weight: 700; font-stretch: 112%; letter-spacing: -0.005em; } .ds-card__note { margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: oklch(42% 0.02 255); } .ds-card__foot { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; } .ds-card__price { font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; } .ds-card__link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: oklch(45% 0.088 253); text-decoration: none; transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-card__link:hover { color: oklch(29% 0.058 255); }"
+    },
+    {
+      "name": "Eingabefeld",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Label oberhalb, weisses Feld mit Linie-Rahmen, Fokus färbt den Rahmen Bastech-Blau.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field__label\">Name *</span><input class=\"ds-input\" type=\"text\" placeholder=\"Ihr Name\"></label>",
+      "css": ".ds-field { font-family: Archivo, system-ui, sans-serif; display: flex; flex-direction: column; gap: 8px; width: 280px; color: oklch(23% 0.025 255); } .ds-field__label { font-size: 14px; font-weight: 600; } .ds-input { font-family: Archivo, system-ui, sans-serif; width: 100%; background: #ffffff; color: oklch(23% 0.025 255); font-size: 15px; padding: 12px 16px; border: 1px solid oklch(89% 0.008 250); border-radius: 6px; transition: border-color 200ms cubic-bezier(0.23, 1, 0.32, 1); box-sizing: border-box; } .ds-input::placeholder { color: oklch(42% 0.02 255 / 0.6); } .ds-input:focus { outline: none; border-color: oklch(45% 0.088 253); }"
+    },
+    {
+      "name": "Navigation (Desktop)",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Papier-Header mit Links; aktiver Link Bastech-Blau mit Unterstrich, inaktive mit wachsendem Unterstrich bei Hover.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__link ds-nav__link--active\" href=\"#\">Leistungen</a><a class=\"ds-nav__link\" href=\"#\">Occasionsmaschinen</a><a class=\"ds-nav__link\" href=\"#\">Über uns</a><a class=\"ds-nav__link\" href=\"#\">Kontakt</a></nav>",
+      "css": ".ds-nav { font-family: Archivo, system-ui, sans-serif; display: flex; gap: 32px; padding: 20px 24px; background: oklch(98.6% 0.002 247); border-bottom: 1px solid oklch(89% 0.008 250); } .ds-nav__link { position: relative; font-size: 15px; font-weight: 500; color: oklch(23% 0.025 255); text-decoration: none; transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-nav__link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 100%; border-radius: 2px; background: oklch(45% 0.088 253 / 0.75); transform: scaleX(0); transform-origin: left; transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-nav__link:hover { color: oklch(45% 0.088 253); } .ds-nav__link:hover::after { transform: scaleX(1); } .ds-nav__link--active { color: oklch(45% 0.088 253); } .ds-nav__link--active::after { transform: scaleX(1); background: oklch(45% 0.088 253); }"
+    },
+    {
+      "name": "Nachtblau-Band mit Display-Titel",
+      "kind": "custom",
+      "refersTo": "band-dark",
+      "description": "Signaturfläche: Nachtblau, Display-Titel Archivo 800 wdth 122 mit Himmelblau-Akzent, Sekundärtext Weiss/75.",
+      "html": "<section class=\"ds-band-dark\"><h2 class=\"ds-band-dark__title\">Maschine steht? <span>Wir bringen sie zum Laufen.</span></h2><p class=\"ds-band-dark__text\">Wer anruft, spricht direkt mit dem Techniker.</p></section>",
+      "css": ".ds-band-dark { font-family: Archivo, system-ui, sans-serif; background: oklch(29% 0.058 255); color: oklch(98% 0.005 250); padding: 48px 32px; border-radius: 8px; max-width: 560px; } .ds-band-dark__title { margin: 0; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; font-stretch: 122%; letter-spacing: -0.01em; line-height: 1.02; text-wrap: balance; } .ds-band-dark__title span { color: oklch(80% 0.05 250); } .ds-band-dark__text { margin: 20px 0 0; font-size: 17px; line-height: 1.65; color: oklch(98% 0.005 250 / 0.75); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Die Werkstatt-Visitenkarte",
+    "overview": "Das System verhält sich wie ein sauber gefrästes Typenschild an einer Maschine: eine Grundfarbe, eine Schrift, keine Verzierung, und alles, was darauf steht, ist überprüfbar. Der Auftritt eines Zwei-Personen-Betriebs, der Industriemaschinen am Laufen hält, muss handfest wirken, nicht wie ein Software-Startup. Deshalb tragen die Titel Gewicht und Breite statt Eleganz, Zahlen laufen tabellarisch wie in einem Katalog, und die Menschen (André, Danilo) sind das prominenteste Bildmotiv, weil sie das eigentliche Produkt sind.\n\nFarblich lebt das System von einer einzigen Familie: dem Bastech-Blau aus dem Logo. Es taucht als tiefe Nachtblau-Fläche im Hero und in den Abschluss-Bändern auf (Committed-Strategie: eine gesättigte Farbe trägt 30–40 % der Fläche), als Aktionsfarbe auf Buttons und Links, und als Himmelblau-Akzent in Titeln auf dunklem Grund. Alles andere ist ein kühl getöntes Neutralraster von Papier über Fläche bis Stahlgrau. Es gibt keine zweite Farbe, keine Verläufe, keine Glas-Effekte.\n\nDichte: mittel. Grosszügige Sektionsabstände, aber Inhalte kompakt gesetzt, mit Listen und Trennlinien statt Kartengittern. Bewegung ist bewusst und sparsam: Reveals beim Scrollen, ein langsam laufendes Herstellerband, ein Umriss-Textband, sonst nichts. Alle Bewegung respektiert Reduced-Motion und funktioniert in Hintergrund-Tabs.",
+    "keyCharacteristics": [
+      "Eine Schriftfamilie (Archivo Variable), Kontrast über die Breitenachse statt über Schriftmischung",
+      "Eine Markenfarbe in drei Rollen: Nachtblau-Flächen, Bastech-Blau-Aktionen, Himmelblau-Akzent",
+      "Kühl getönte Neutrale, kein Cremeton, kein reines Schwarz",
+      "Echte Menschen und echte Maschinen; Duotone nur für Stimmungsbilder, Echtfarbe für Ware und Porträts",
+      "Flache Flächen, Schatten nur als Reaktion oder für schwebende Elemente",
+      "Saubere Linien-Icons (Feather-Stil), keine Unicode-Pfeile, keine Emojis",
+      "Keine Gedankenstriche im Fliesstext, Schweizer Schreibweise (ss, `CHF 3'500.–`)"
+    ],
+    "rules": [
+      {
+        "name": "Die Eine-Familie-Regel",
+        "body": "Es gibt genau eine Buntfarbe. Jede neue Fläche, jeder neue Zustand wird aus Bastech-Blau, Nachtblau, Himmelblau oder Blauton gebaut, oder aus dem Neutralraster. Eine zweite Farbe (Grün für Erfolg, Rot für Fehler) ist nur in Formular-Feedback erlaubt und bleibt dort.",
+        "section": "colors"
+      },
+      {
+        "name": "Die Fläche-trägt-Regel",
+        "body": "Sättigung sitzt in grossen Flächen (Hero, Bänder, Footer) und in Aktionen. Sie sitzt nie in Verläufen, Textverläufen, farbigen Seitenstreifen oder Glas-Effekten.",
+        "section": "colors"
+      },
+      {
+        "name": "Die Breiten-Regel",
+        "body": "Hierarchie entsteht durch Breite und Gewicht der Archivo, nie durch eine zweite Schriftfamilie. Wer eine Monospace oder Serife einführen will, verlässt das System.",
+        "section": "typography"
+      },
+      {
+        "name": "Die Ziffern-Regel",
+        "body": "Alles, was gezählt oder gewählt wird (Telefon, CHF, Baujahr), steht tabellarisch und fett genug, um auf dem Handy in der Werkhalle lesbar zu sein.",
+        "section": "typography"
+      },
+      {
+        "name": "Die Reaktions-Regel",
+        "body": "Ruhezustand ist flach. Ein Schatten braucht einen Grund: Hover, Schweben über der Seite oder das eine Hero-Bild. Kein Schatten auf Sektionen, Bändern, Buttons oder Inputs.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** jede neue Fläche aus Papier, Fläche oder Nachtblau bauen und mit 1px Linie trennen; Sektionsabstand 80–96px.",
+      "**Do** Titel in Archivo 800 mit `wdth` 122 setzen, Fliesstext in 400 normalbreit, Zahlen tabellarisch und fett.",
+      "**Do** beide Ansprechpartner mit Name, Rolle und Nummer zeigen, wo eine Kontaktaufnahme möglich ist (Hero, CTA-Band, Kontakt, Footer, mobile Leiste, Assistent).",
+      "**Do** Feather-Linien-Icons aus `components/Icons.tsx` verwenden (Strichstärke 1.8–2), Grösse 14–20px, Farbe erbt vom Text.",
+      "**Do** Duotone (`.duotone`) nur für Stimmungsbilder auf Nachtblau; Occasionsmaschinen und Porträts in Echtfarbe.",
+      "**Do** Reveals so bauen, dass Server-HTML sichtbar ist und die Animation erst nach Hydration und nur in sichtbaren Tabs startet.",
+      "**Do** Schweizer Schreibweise: ss statt ß, `CHF 3'500.–`, Kommas und Punkte statt Gedankenstriche."
+    ],
+    "donts": [
+      "**Don't** eine zweite Schriftfamilie, Monospace-Zahlen oder Uppercase-Tracking-Kicker über Sektionen einführen.",
+      "**Don't** Verläufe, Textverläufe, Glas-Effekte, farbige Seitenstreifen oder Neon-Glows verwenden.",
+      "**Don't** Unicode-Pfeile („→\"), Emojis oder Ping-Punkte als Symbole setzen.",
+      "**Don't** Radien über 8px auf Karten, Bildern oder Sektionen; Vollrund nur für Chips, Avatare und den Assistenten-Button.",
+      "**Don't** Backdrop-Blur auf dem fixen Header (kollabiert das mobile Menü) und keine Inhalte, deren Sichtbarkeit von JavaScript-Animationen abhängt.",
+      "**Don't** Schatten im Ruhezustand auf Sektionen, Bändern, Buttons oder Inputs.",
+      "**Don't** Referenzen, Bewertungen, Zertifikate oder Kundenzahlen darstellen, die nicht in PRODUCT.md als vorhanden geführt sind."
+    ]
+  }
+}
