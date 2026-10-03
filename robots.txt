@@ -1,4 +1,3 @@
 User-Agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://bastechbetriebeag.ch/sitemap.xml

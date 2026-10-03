@@ -1,0 +1,3 @@
+# Alte Adressen der früheren WordPress-Seite (Cloudflare Pages, Netlify)
+/produktliste    /occasionen/  301
+/produktliste/*  /occasionen/  301
