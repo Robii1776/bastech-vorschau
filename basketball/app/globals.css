@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+/*
+ * BasketAG: "Hallenboden". Die Seite ist eine Turnhalle bei Tageslicht:
+ * kreideweisser Grund, Ahorn-Parkett als Material, Linien und Zone in
+ * Schwyzer Rot, Anzeigetafel in Hallenschwarz. Rot nur dort, wo gespielt
+ * (geklickt) wird.
+ */
+@theme {
+  --color-chalk: oklch(98.4% 0.003 90);
+  --color-surface: oklch(95.6% 0.007 80);
+  --color-ink: oklch(20.5% 0.018 262);
+  --color-ink-soft: oklch(42% 0.018 262);
+  --color-line: oklch(88.5% 0.01 80);
+  --color-red: oklch(53% 0.2 27);
+  --color-red-deep: oklch(42% 0.165 27);
+  --color-maple: oklch(82% 0.07 72);
+  --color-maple-deep: oklch(66% 0.095 62);
+  --color-board: oklch(17% 0.014 262);
+  --color-led: oklch(84% 0.14 78);
+  --color-on-dark: oklch(96% 0.006 80);
+  --color-on-dark-soft: oklch(76% 0.012 262);
+
+  /* Display: Big Shoulders (Hallenbeschriftung, Anzeigetafel).
+     Text: Familjen Grotesk, ruhig und gut lesbar auf dem Handy. */
+  --font-display: var(--font-shoulders), "Arial Narrow", system-ui, sans-serif;
+  --font-sans: var(--font-familjen), system-ui, sans-serif;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--color-chalk);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-red);
+  color: var(--color-on-dark);
+}
+
+h1,
+h2,
+h3,
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  line-height: 0.92;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Kleine Grossbuchstaben-Labels, wie die Beschriftung an der Hallenwand */
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 3px;
+}
+
+.pressable {
+  transition:
+    transform 160ms var(--ease-out-strong),
+    background-color 200ms ease,
+    color 200ms ease;
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: var(--color-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms var(--ease-out-strong);
+}
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Spielfeld im Hero: Linien werden einmal gezogen, wie frisch markiert */
+.court-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: draw-line 1.6s var(--ease-out-strong) both;
+}
+.court-line:nth-of-type(2n) {
+  animation-delay: 120ms;
+}
+.court-line:nth-of-type(3n) {
+  animation-delay: 240ms;
+}
+@keyframes draw-line {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+.court-paint {
+  animation: paint-in 900ms 500ms ease-out both;
+}
+@keyframes paint-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Ball fällt auf die Freiwurflinie und tickt zweimal nach */
+.ball-drop {
+  animation: ball-drop 1.4s 700ms cubic-bezier(0.3, 0, 0.4, 1) both;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+@keyframes ball-drop {
+  0% {
+    transform: translateY(-260px);
+  }
+  45% {
+    transform: translateY(0) scale(1.06, 0.92);
+  }
+  62% {
+    transform: translateY(-70px);
+  }
+  78% {
+    transform: translateY(0) scale(1.03, 0.97);
+  }
+  88% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Scroll-Reveal rein in CSS, siehe components/Reveal.tsx */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry var(--reveal-offset, 0%) entry calc(var(--reveal-offset, 0%) + 45%);
+    }
+  }
+}
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    translate: 0 28px;
+  }
+}
+
+/* FAQ: natives <details>, funktioniert ohne JavaScript */
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq .faq-icon {
+  transition: transform 220ms var(--ease-out-strong);
+}
+.faq[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Mobiles Menü als <details>: zugänglich und ohne Hydration nutzbar */
+.menu summary {
+  list-style: none;
+  cursor: pointer;
+}
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .court-line,
+  .court-paint,
+  .ball-drop {
+    animation: none;
+  }
+}
